@@ -1,0 +1,1837 @@
+﻿id,history,question,gold_tasks,raw_output,schema_ok,tool_sequence_ok,task_cosines,mean_cosine,min_cosine,parse_error
+1,"[{""role"": ""user"", ""content"": ""Môn Đo lường có hai bài: Sai số dụng cụ và Sai số phép đo. Mình đang đọc góp ý cho bài thứ nhất.""}, {""role"": ""assistant"", ""content"": ""Bạn muốn xem cả hai nhận xét à?""}]","Chỉ bài sau thôi. Nếu thầy có nhắc tới độ chia nhỏ nhất thì trích đúng câu thầy ghi cho mình, kể cả nếu nó khác cách viết trong slide.","[{""tool"": ""database"", ""question"": ""Tra nhận xét của giảng viên cho bài Sai số phép đo của tôi trong môn Đo lường và trích nguyên câu nhắc tới độ chia nhỏ nhất nếu có.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Trích dẫn nhận xét của thầy về độ chia nhỏ nhất trong bài Sai số dụng cụ.""
+    }
+  ]
+}",1,0,[],,,
+2,"[{""role"": ""user"", ""content"": ""Đề cương viết “được nộp trong vòng 48 giờ sau hạn”. Moodle đang hiện bài Tiểu luận 1 môn Xã hội học đóng lúc 17h thứ Sáu.""}]","Mốc thứ Sáu mình tự xem được. Tìm hộ câu ngay trước đoạn 48 giờ xem quy định ấy dành riêng cho ai, rồi giả sử mình thuộc nhóm đó và hạn gốc là 17h thứ Tư thì tính mốc cuối.","[{""tool"": ""retrieval"", ""question"": ""Tìm câu ngay trước quy định 48 giờ trong đề cương Xã hội học để xác định đối tượng áp dụng.""}, {""tool"": ""base"", ""question"": ""Với giả định thuộc nhóm được gia hạn 48 giờ từ 17h thứ Tư, tính thời điểm cuối được nộp.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra thông tin về quy định nộp bài tiểu luận 1 môn Xã hội học.""
+    }
+  ]
+}",1,0,[],,,
+3,"[{""role"": ""user"", ""content"": ""Trong ví dụ thầy chiếu, lớp A đạt 8/10 và lớp B đạt 60/100. Thầy vừa chuyển sang bảng điểm thật của lớp mình.""}]",Khoan lấy bảng mới. Nếu chọn đều một lớp rồi bốc một bạn trong lớp ấy thì xác suất đạt ở ví dụ trước là bao nhiêu? Sao gộp danh sách hai lớp lại bốc có thể ra số khác?,"[{""tool"": ""base"", ""question"": ""Dùng số liệu ví dụ A đạt 8/10 và B đạt 60/100 để tính xác suất đạt khi chọn đều một lớp rồi chọn đều một bạn, và giải thích sự khác biệt khi chọn đều từ danh sách gộp.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích xác suất khi chọn một học sinh từ một lớp và xác suất khi chọn từ hai lớp khác nhau.""
+    }
+  ]
+}",1,1,[0.7277654409408569],0.7277654409408569,0.7277654409408569,
+4,[],trong sách tiếng anh 2 phần câu điều kiện nằm đâu,"[{""tool"": ""retrieval"", ""question"": ""Tìm vị trí phần câu điều kiện trong giáo trình Tiếng Anh 2.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần câu điều kiện trong sách tiếng Anh 2.""
+    }
+  ]
+}",1,1,[0.8873147964477539],0.8873147964477539,0.8873147964477539,
+5,"[{""role"": ""user"", ""content"": ""Lab 2 và Lab 3 môn Điện tử đều có mục “phân tích sai số”. Rubric chung ghi tối đa 2 điểm.""}]","Cái 2 điểm ấy mình biết rồi. Ở bài có số lớn hơn, lấy đúng lời người chấm viết cho mục đó của mình. Nếu họ để trống thì cứ ghi trống.","[{""tool"": ""database"", ""question"": ""Tra nhận xét thực tế của người chấm cho mục phân tích sai số ở Lab 3 môn Điện tử của tôi, ghi trống nếu không có nhận xét.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích cách lấy số lớn hơn từ lời chấm của giảng viên cho mục phân tích sai số.""
+    }
+  ]
+}",1,0,[],,,
+6,"[{""role"": ""user"", ""content"": ""Tớ cần đối chiếu bản đề cương cũ với bản hiệu chỉnh môn Kinh tế lượng.""}, {""role"": ""assistant"", ""content"": ""Hai bản khác nhau ở mục đánh giá giữa kỳ.""}]","Chép giúp hai đoạn nói về cách làm tròn theo thứ tự bản sửa trước, bản cũ sau. Nhỡ bản nào không ghi thì đánh dấu thiếu ngay ở bản ấy.","[{""tool"": ""retrieval"", ""question"": ""Trích quy định làm tròn điểm giữa kỳ trong đề cương hiệu chỉnh môn Kinh tế lượng, đánh dấu nếu thiếu.""}, {""tool"": ""retrieval"", ""question"": ""Trích quy định tương ứng trong đề cương cũ môn Kinh tế lượng, đánh dấu nếu thiếu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Chép đoạn văn về cách làm tròn theo thứ tự bản sửa trước, bản cũ sau từ đề cương môn Kinh tế lượng.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Chép đoạn văn về cách làm tròn theo thứ tự bản cũ trước, bản sửa sau từ đề cương môn Kinh tế lượng.""
+    }
+  ]
+}",1,1,"[0.6925264000892639, 0.7709717750549316]",0.7317490875720978,0.6925264000892639,
+7,"[{""role"": ""user"", ""content"": ""Môn Thống kê có quiz Ước lượng và quiz Kiểm định. Mình đã hỏi điểm quiz Ước lượng rồi.""}]","Cái còn lại, lấy hai lần mình nộp đầu tiên theo thời gian, dù còn lần sau cao hơn. Dùng cặp đó tính mức tăng tương đối so với lần đầu, nếu gốc bằng 0 thì nói rõ.","[{""tool"": ""database"", ""question"": ""Lấy điểm hai lượt nộp đầu tiên của tôi ở quiz Kiểm định môn Thống kê theo thứ tự thời gian.""}, {""tool"": ""base"", ""question"": ""Từ hai điểm vừa lấy, tính phần trăm thay đổi từ lần đầu sang lần hai so với lần đầu, giải thích trường hợp điểm đầu bằng 0.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Lấy hai lần nộp đầu tiên của môn Thống kê theo thời gian, dù còn lần sau cao hơn.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tính mức tăng tương đối so với lần đầu, nếu gốc bằng 0 thì nói rõ.""
+    }
+  ]
+}",1,1,"[0.8372086882591248, 0.6858776807785034]",0.7615431845188141,0.6858776807785034,
+8,"[{""role"": ""user"", ""content"": ""Mình đang học tế bào nhân sơ và nhân thực.""}, {""role"": ""assistant"", ""content"": ""Hai loại tế bào này khác nhau về cấu trúc.""}]",trong slide sinh học có so sánh 2 loại đó ko,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung so sánh tế bào nhân sơ và nhân thực trong slide Sinh học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm so sánh giữa tế bào nhân sơ và nhân thực trong slide sinh học.""
+    }
+  ]
+}",1,1,[0.9469135403633118],0.9469135403633118,0.9469135403633118,
+9,"[{""role"": ""user"", ""content"": ""Mình thấy chữ “đã hoàn thành” trong ảnh minh họa trang hoạt động của bài giảng Nhập môn LMS.""}, {""role"": ""assistant"", ""content"": ""Bạn đang muốn tra trạng thái của tài khoản mình à?""}]","Ý mình là chú thích ngay dưới tấm hình đó bảo ai đánh dấu, người học hay hệ thống? Trích giúp chỗ làm căn cứ.","[{""tool"": ""retrieval"", ""question"": ""Tìm chú thích dưới ảnh trang hoạt động có chữ “đã hoàn thành” trong bài giảng Nhập môn LMS và trích căn cứ xác định ai đánh dấu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Trích dẫn chú thích dưới tấm hình minh họa trang hoạt động của bài giảng Nhập môn LMS về ai đánh dấu trạng thái 'đã hoàn thành'.""
+    }
+  ]
+}",1,1,[0.8494940400123596],0.8494940400123596,0.8494940400123596,
+10,[],trong bài học máy có ví dụ phân cụm nào,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ phân cụm trong bài giảng Học máy.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về phân cụm trong bài học máy.""
+    }
+  ]
+}",1,1,[0.913952112197876],0.913952112197876,0.913952112197876,
+11,"[{""role"": ""user"", ""content"": ""Mình ghi hai cách chia dữ liệu chuỗi thời gian: A xáo tất cả trước khi chia, B giữ nguyên thứ tự. Slide có đáp án rồi.""}]","Đổi điều kiện một chút: một khách hàng có nhiều bản ghi, lúc chạy thật chỉ dự đoán tháng sau cho khách cũ. Nếu giữ B mà chuẩn hóa bằng trung bình của cả năm thì còn hở ở đâu? Minh họa bằng một tháng cụ thể tự chọn.","[{""tool"": ""base"", ""question"": ""Phân tích rò rỉ dữ liệu khi dự đoán tháng sau cho khách cũ bằng cách chia theo thời gian nhưng chuẩn hóa theo trung bình cả năm, minh họa bằng một tháng cụ thể.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích cách chuẩn hóa dữ liệu bằng trung bình của cả năm trong trường hợp giữ nguyên thứ tự (B) và chỉ dự đoán cho khách hàng cũ.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Trích dẫn một ví dụ cụ thể từ slide về cách chuẩn hóa dữ liệu bằng trung bình của cả năm trong trường hợp giữ nguyên thứ tự (B).""
+    }
+  ]
+}",1,0,[],,,
+12,"[{""role"": ""user"", ""content"": ""Bài Nhật ký đọc và bài Bình sách của môn Văn học đều đã có điểm. Mình vừa gửi bạn mẫu phiếu tự đánh giá của bài Bình sách.""}]",Tìm cho mình tiêu chí “dẫn chứng” trong chính mẫu đó. Còn số điểm của mục cùng tên thì lấy từ phiếu thầy đã chấm cho bài kia của mình.,"[{""tool"": ""retrieval"", ""question"": ""Tìm tiêu chí dẫn chứng trong mẫu phiếu tự đánh giá bài Bình sách môn Văn học.""}, {""tool"": ""database"", ""question"": ""Tra điểm mục dẫn chứng trong phiếu giảng viên đã chấm cho bài Nhật ký đọc môn Văn học của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra tiêu chí 'dẫn chứng' trong mẫu phiếu tự đánh giá của bài Bình sách.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra số điểm môn Văn học của bài Bình sách đã được thầy chấm.""
+    }
+  ]
+}",1,0,[],,,
+13,[],quiz tuần 2 môn anm mình làm chưa,"[{""tool"": ""database"", ""question"": ""Kiểm tra tôi đã làm quiz tuần 2 môn An toàn mạng chưa.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra lịch sử làm quiz tuần 2 môn ANM của người dùng.""
+    }
+  ]
+}",1,1,[0.6340804696083069],0.6340804696083069,0.6340804696083069,
+14,"[{""role"": ""user"", ""content"": ""Môn Lập trình có bài “Nộp lại” và bài “Sửa lỗi”. Cả hai tên này đều là tên bài.""}]",Lọc các lần mình nộp bài thứ nhất sau hạn gốc nhưng trước hoặc đúng hạn gia hạn của riêng mình. Có lần nào lọt vào khoảng đó dù hệ thống vẫn hiện nhãn trễ không?,"[{""tool"": ""database"", ""question"": ""Lọc các lượt nộp của tôi cho bài có tên Nộp lại môn Lập trình với hạn gốc < thời điểm nộp ≤ hạn gia hạn cá nhân và cho biết lượt nào vẫn mang nhãn trễ.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Lọc các lần nộp bài thứ nhất của người dùng sau hạn gốc nhưng trước hoặc đúng hạn gia hạn của riêng mình trong môn Lập trình.""
+    }
+  ]
+}",1,1,[0.693585991859436],0.693585991859436,0.693585991859436,
+15,[],bài giải mẫu quy tắc bayes,"[{""tool"": ""retrieval"", ""question"": ""Tìm tài liệu có bài giải mẫu về quy tắc Bayes.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích quy tắc Bayes và đưa ra một bài giải mẫu.""
+    }
+  ]
+}",1,0,[],,,
+16,[],có thông báo mới nào trong môn an toàn thông tin ko,"[{""tool"": ""database"", ""question"": ""Tra thông báo mới trong môn An toàn thông tin.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra thông báo mới trong môn an toàn thông tin.""
+    }
+  ]
+}",1,1,[0.9930015802383423],0.9930015802383423,0.9930015802383423,
+17,"[{""role"": ""user"", ""content"": ""Trong giáo trình Di truyền có hai sơ đồ phả hệ, sơ đồ bên trái ghi “gia đình A”, bên phải là “gia đình B”.""}]","Hình bên phải ấy, tìm đúng chú giải của ô tô nửa đen. Rồi tự dựng một ví dụ mà cùng ký hiệu đó sẽ bị đọc sai nếu mang chú giải của hình bên trái sang; lấy cả chú giải bên trái làm căn cứ nhé.","[{""tool"": ""retrieval"", ""question"": ""Tìm nghĩa ô tô nửa đen trong chú giải sơ đồ gia đình B ở giáo trình Di truyền.""}, {""tool"": ""retrieval"", ""question"": ""Tìm nghĩa của ký hiệu tương ứng trong chú giải sơ đồ gia đình A ở cùng giáo trình.""}, {""tool"": ""base"", ""question"": ""Dựa trên hai chú giải, nếu cách hiểu khác nhau thì dựng ví dụ đọc sai khi áp chú giải A cho sơ đồ B; nếu trùng nhau thì nêu vì sao không thể tạo ví dụ theo giả thiết.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm chú giải của ô tô nửa đen trong sơ đồ bên phải của gia đình B.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tự dựng một ví dụ mà cùng ký hiệu đó sẽ bị đọc sai nếu mang chú giải của hình bên trái sang, dựa trên chú giải bên trái của gia đình A.""
+    }
+  ]
+}",1,0,[],,,
+18,"[{""role"": ""user"", ""content"": ""Lịch LMS đang ghi buổi bảo vệ nhóm mình sáng thứ Ba. Đề luyện nói tiếng Anh lại có câu “Our defense is on Tuesday morning”.""}]","Câu sau ấy, giả sử giờ đã là tối thứ Tư cùng tuần và buổi đó diễn ra đúng lịch, kể lại bằng một câu tiếng Anh sao cho nghe tự nhiên.","[{""tool"": ""base"", ""question"": ""Viết lại câu Our defense is on Tuesday morning bằng tiếng Anh tự nhiên từ góc nhìn tối thứ Tư cùng tuần, với giả định buổi bảo vệ đã diễn ra sáng thứ Ba.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Kể lại buổi bảo vệ nhóm diễn ra đúng lịch vào sáng thứ Ba, giờ đã là tối thứ Tư cùng tuần.""
+    }
+  ]
+}",1,1,[0.6310005187988281],0.6310005187988281,0.6310005187988281,
+19,[],quiz tiếng anh 1 còn mở ko,"[{""tool"": ""database"", ""question"": ""Kiểm tra quiz môn Tiếng Anh 1 hiện còn mở không.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Kiểm tra trạng thái quiz tiếng anh 1 còn mở hay đã đóng.""
+    }
+  ]
+}",1,1,[0.7944395542144775],0.7944395542144775,0.7944395542144775,
+20,[],kiểu mạng có dây và không dây khác nhau sao,"[{""tool"": ""base"", ""question"": ""So sánh mạng có dây và mạng không dây.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""So sánh sự khác nhau giữa mạng có dây và mạng không dây.""
+    }
+  ]
+}",1,1,[0.9709056615829468],0.9709056615829468,0.9709056615829468,
+21,"[{""role"": ""user"", ""content"": ""Ở môn Cơ học, bài nào mình nộp cũng kèm một phiếu tự chấm. Điểm trên phiếu đôi khi khác điểm thầy ghi.""}]","Chọn bài đã chấm có hạn nộp muộn nhất, nếu trùng hạn lấy tất cả. Mình chỉ cần điểm thầy ghi của bài được chọn và đoạn trong hướng dẫn chấm chung nói khi nào được làm tròn.","[{""tool"": ""database"", ""question"": ""Trong các bài Cơ học đã được chấm của tôi, lấy điểm giảng viên ghi cho tất cả bài có hạn nộp muộn nhất.""}, {""tool"": ""retrieval"", ""question"": ""Trích đoạn hướng dẫn chấm chung môn Cơ học quy định trường hợp được làm tròn.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm của bài đã chấm có hạn nộp muộn nhất trong môn Cơ học và chỉ lấy điểm thầy ghi, đồng thời lấy đoạn trong hướng dẫn chấm chung nói về việc làm tròn điểm.""
+    }
+  ]
+}",1,0,[],,,
+22,[],tài liệu pháp luật phần phân loại hợp đồng,"[{""tool"": ""retrieval"", ""question"": ""Tìm phần phân loại hợp đồng trong tài liệu Pháp luật.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu pháp luật liên quan đến phân loại hợp đồng.""
+    }
+  ]
+}",1,1,[0.9680183529853821],0.9680183529853821,0.9680183529853821,
+23,[],khi nào dùng trung vị thay cho trung bình,"[{""tool"": ""base"", ""question"": ""Nêu trường hợp nên dùng trung vị thay cho trung bình cộng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích khi nào nên sử dụng trung vị thay cho trung bình.""
+    }
+  ]
+}",1,1,[0.8989627361297607],0.8989627361297607,0.8989627361297607,
+24,[],điểm thi giữa kỳ vật lý của em,"[{""tool"": ""database"", ""question"": ""Tra điểm thi giữa kỳ môn Vật lý của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm thi giữa kỳ môn vật lý của người dùng.""
+    }
+  ]
+}",1,1,[0.8251038789749146],0.8251038789749146,0.8251038789749146,
+25,"[{""role"": ""user"", ""content"": ""Mình tính 3/5 người trả lời đồng ý. Còn 5 người được mời mà chưa trả lời.""}, {""role"": ""assistant"", ""content"": ""Bạn muốn tính tỷ lệ trên cả 10 người được mời?""}]","Trên cả mười, nhưng đừng mặc định im lặng là phản đối. Với đúng những gì đang biết, tỷ lệ đồng ý có thể thấp nhất và cao nhất bao nhiêu?","[{""tool"": ""base"", ""question"": ""Tính cận dưới và cận trên của tỷ lệ đồng ý trong 10 người được mời, biết 3/5 người trả lời đồng ý và 5 người còn lại chưa rõ ý kiến.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tính tỷ lệ đồng ý thấp nhất là 0% và cao nhất là 60% dựa trên thông tin hiện có.""
+    }
+  ]
+}",1,1,[0.6405872106552124],0.6405872106552124,0.6405872106552124,
+26,"[{""role"": ""user"", ""content"": ""Trong môn Mạch điện, lab Đo dòng có một bản hướng dẫn và có cả nhận xét của thầy cho bài mình. Hôm trước mình đã hỏi nhận xét.""}]",Lần này tìm hình mắc ampe kế trong bản phát cho cả lớp. Nếu giả sử chuyển đúng chiếc đồng hồ trong hình sang mắc song song với tải thì giải thích điều gì có thể xảy ra.,"[{""tool"": ""retrieval"", ""question"": ""Tìm hình mắc ampe kế trong bản hướng dẫn lab Đo dòng phát cho cả lớp môn Mạch điện.""}, {""tool"": ""base"", ""question"": ""Dựa vào cách dùng ampe kế trong hình, giải thích hệ quả nếu mắc ampe kế song song với tải.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm hình mắc ampe kế trong bản phát cho cả lớp môn Mạch điện.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích điều gì có thể xảy ra nếu giả sử chuyển đúng chiếc đồng hồ trong hình sang mắc song song với tải.""
+    }
+  ]
+}",1,1,"[0.7283660173416138, 0.5120866894721985]",0.6202263534069061,0.5120866894721985,
+27,[],trong giáo trình vật lý công suất có đơn vị gì,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung đơn vị đo công suất trong giáo trình Vật lý.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm đơn vị của công suất trong giáo trình vật lý.""
+    }
+  ]
+}",1,1,[0.9508606195449829],0.9508606195449829,0.9508606195449829,
+28,[],cho xin quy trình làm thí nghiệm chuẩn độ trong tài liệu lab,"[{""tool"": ""retrieval"", ""question"": ""Tìm quy trình thí nghiệm chuẩn độ trong tài liệu thực hành.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm quy trình làm thí nghiệm chuẩn độ trong tài liệu lab.""
+    }
+  ]
+}",1,1,[0.9439667463302612],0.9439667463302612,0.9439667463302612,
+29,[],giáo trình hệ điều hành giải thích tiến trình và luồng khác nhau ntn,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung so sánh tiến trình và luồng trong giáo trình Hệ điều hành.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa tiến trình và luồng trong hệ điều hành.""
+    }
+  ]
+}",1,0,[],,,
+30,"[{""role"": ""user"", ""content"": ""Quiz A và B môn Logic đều có hai lần mình làm. A lấy điểm cao nhất, còn B lấy lần cuối.""}]","Giả sử đổi luật của B thành luật của A, giữ nguyên các lượt đã làm. Lấy cho mình điểm từng lượt của B rồi cho biết điểm giả định chênh bao nhiêu so với cách tính hiện tại.","[{""tool"": ""database"", ""question"": ""Tra điểm các lượt đã làm của tôi ở quiz B môn Logic theo thứ tự thời gian.""}, {""tool"": ""base"", ""question"": ""Từ điểm các lượt quiz B, so sánh điểm cao nhất với điểm lượt cuối và tính chênh lệch khi đổi quy tắc.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm các lượt làm quiz B của người dùng theo luật A.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm cao nhất của quiz B theo luật B.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tính chênh lệch điểm giữa hai cách tính và đưa ra kết quả.""
+    }
+  ]
+}",1,0,[],,,
+31,[],trong slide mạng máy tính phân loại topo mạng thế nào,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung phân loại cấu trúc liên kết mạng trong slide Mạng máy tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm thông tin về phân loại topo mạng trong slide mạng máy tính.""
+    }
+  ]
+}",1,1,[0.8618710041046143],0.8618710041046143,0.8618710041046143,
+32,"[{""role"": ""user"", ""content"": ""Trong đề mẫu môn Kế toán, “điểm hòa vốn” nằm ngay sau mục chấm điểm bài tập.""}]","Lấy nguyên câu định nghĩa cái đứng sau. Rồi nếu giá bán bằng biến phí đơn vị mà định phí vẫn dương, có sản lượng hữu hạn nào đạt được cái đó không?","[{""tool"": ""retrieval"", ""question"": ""Trích nguyên câu định nghĩa điểm hòa vốn trong đề mẫu môn Kế toán.""}, {""tool"": ""base"", ""question"": ""Xét có tồn tại sản lượng hòa vốn hữu hạn khi giá bán bằng biến phí đơn vị và định phí dương hay không.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm định nghĩa của 'điểm hòa vốn' trong slide hoặc tài liệu nội bộ.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Nếu giá bán bằng biến phí đơn vị và định phí vẫn dương, có sản lượng hữu hạn nào đạt được điểm hòa vốn không?""
+    }
+  ]
+}",1,1,"[0.5794522762298584, 0.7921962141990662]",0.6858242452144623,0.5794522762298584,
+33,[],môn cơ sở dữ liệu ai dạy vậy,"[{""tool"": ""database"", ""question"": ""Tra giảng viên môn Cơ sở dữ liệu của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra giảng viên dạy môn Cơ sở dữ liệu.""
+    }
+  ]
+}",1,1,[0.7823663353919983],0.7823663353919983,0.7823663353919983,
+34,[],SQL có những nhóm lệnh nào,"[{""tool"": ""base"", ""question"": ""Liệt kê các nhóm lệnh SQL phổ biến.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""SQL có những nhóm lệnh chính là lệnh DDL, DML và DCL.""
+    }
+  ]
+}",1,1,[0.6652585864067078],0.6652585864067078,0.6652585864067078,
+35,"[{""role"": ""user"", ""content"": ""Tuần trước mình làm quiz Đạo hàm, tuần này là quiz Tích phân, đều môn Giải tích.""}, {""role"": ""assistant"", ""content"": ""Bạn muốn đối chiếu hai quiz?""}]","Chỉ dùng bài tuần trước để xác định mốc: sau lúc mình nộp lần cuối bài đó, mình có bắt đầu lượt nào của bài tuần này trước 0 giờ thứ Hai tuần này không? Kể cả lượt bỏ dở.","[{""tool"": ""database"", ""question"": ""Tra thời điểm tôi nộp lần cuối quiz Đạo hàm môn Giải tích.""}, {""tool"": ""database"", ""question"": ""Tìm các lượt quiz Tích phân của tôi bắt đầu sau mốc nộp vừa tra và trước 0 giờ thứ Hai tuần này, gồm cả lượt bỏ dở.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra cứu lượt làm bài quiz Tích phân của bạn sau khi nộp bài quiz Đạo hàm lần cuối trước 0 giờ thứ Hai tuần này.""
+    }
+  ]
+}",1,0,[],,,
+36,[],slide lập trình có bảng các toán tử ko,"[{""tool"": ""retrieval"", ""question"": ""Tìm bảng các toán tử trong slide Lập trình.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bảng các toán tử trong slide lập trình.""
+    }
+  ]
+}",1,1,[0.9961709976196289],0.9961709976196289,0.9961709976196289,
+37,[],axit với bazơ phân biệt kiểu gì,"[{""tool"": ""base"", ""question"": ""Nêu cách phân biệt axit và bazơ ở mức cơ bản.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác biệt giữa axit và bazơ.""
+    }
+  ]
+}",1,1,[0.804863452911377],0.804863452911377,0.804863452911377,
+38,[],kiếm bảng công thức lượng giác trong tài liệu toán,"[{""tool"": ""retrieval"", ""question"": ""Tìm bảng công thức lượng giác trong tài liệu Toán.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bảng công thức lượng giác trong tài liệu toán.""
+    }
+  ]
+}",1,1,[0.8604037761688232],0.8604037761688232,0.8604037761688232,
+39,[],nguyên phân và giảm phân khác nhau ở đâu,"[{""tool"": ""base"", ""question"": ""So sánh nguyên phân và giảm phân.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa nguyên phân và giảm phân.""
+    }
+  ]
+}",1,1,[0.8283241391181946],0.8283241391181946,0.8283241391181946,
+40,[],HTTPS bảo mật hơn HTTP ở điểm nào,"[{""tool"": ""base"", ""question"": ""So sánh HTTPS và HTTP về bảo mật.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""HTTPS bảo mật hơn HTTP ở điểm nào?""
+    }
+  ]
+}",1,1,[0.9126672744750977],0.9126672744750977,0.9126672744750977,
+41,[],virus máy tính lây qua những đường nào,"[{""tool"": ""base"", ""question"": ""Nêu các con đường lây lan phổ biến của virus máy tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích các cách virus máy tính có thể lây lan.""
+    }
+  ]
+}",1,1,[0.9274371862411499],0.9274371862411499,0.9274371862411499,
+42,"[{""role"": ""user"", ""content"": ""Bảng ví dụ của môn Xác suất có hai cột: “đã làm” và “đã nộp”. Trong slide, thầy dùng một dấu sao để chỉ một trong hai.""}]","Trước hết xem chú thích dấu sao chỉ cột nào. Dùng đúng nghĩa vừa tra để lọc quiz của mình trong môn ấy: nếu là đã làm thì lấy các quiz đã bắt đầu kể cả bỏ dở, nếu là đã nộp thì chỉ lấy quiz có lượt nộp.","[{""tool"": ""retrieval"", ""question"": ""Tra chú thích dấu sao trong bảng ví dụ trên slide Xác suất để xác định nó chỉ đã làm hay đã nộp.""}, {""tool"": ""database"", ""question"": ""Lọc quiz của tôi trong môn Xác suất theo nghĩa dấu sao vừa tra: đã làm thì lấy quiz có lượt bắt đầu kể cả bỏ dở, đã nộp thì lấy quiz có lượt nộp.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Lọc quiz trong môn Xác suất theo điều kiện đã làm: lấy các quiz đã bắt đầu kể cả bỏ dở.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Lọc quiz trong môn Xác suất theo điều kiện đã nộp: chỉ lấy quiz có lượt nộp.""
+    }
+  ]
+}",1,0,[],,,
+43,[],khóa học tin học đại cương mình đã hoàn thành chưa,"[{""tool"": ""database"", ""question"": ""Kiểm tra trạng thái hoàn thành khóa học Tin học đại cương của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Kiểm tra trạng thái khóa học tin học đại cương của người dùng.""
+    }
+  ]
+}",1,1,[0.6916565895080566],0.6916565895080566,0.6916565895080566,
+44,"[{""role"": ""user"", ""content"": ""IPv4 là phiên bản nào của giao thức IP?""}, {""role"": ""assistant"", ""content"": ""IPv4 là phiên bản 4 của giao thức Internet.""}]",nó dài bn bit,"[{""tool"": ""base"", ""question"": ""Nêu độ dài địa chỉ IPv4 theo bit.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích độ dài của IPv4 là bao nhiêu bit.""
+    }
+  ]
+}",1,1,[0.9227544069290161],0.9227544069290161,0.9227544069290161,
+45,[],slide tâm lý học có nói nguyên nhân stress ko,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung nguyên nhân stress trong slide Tâm lý học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm nguyên nhân gây stress trong slide tâm lý học.""
+    }
+  ]
+}",1,1,[0.9564793109893799],0.9564793109893799,0.9564793109893799,
+46,[],sóng âm truyền được trong chân không không,"[{""tool"": ""base"", ""question"": ""Giải thích liệu sóng âm có truyền được trong chân không không.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự truyền của sóng âm trong chân không.""
+    }
+  ]
+}",1,1,[0.9268226027488708],0.9268226027488708,0.9268226027488708,
+47,[],môn mạng máy tính có mấy bài quiz,"[{""tool"": ""database"", ""question"": ""Đếm số bài quiz trong môn Mạng máy tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra số lượng bài quiz đã được thực hiện trong môn Mạng máy tính.""
+    }
+  ]
+}",1,1,[0.9119863510131836],0.9119863510131836,0.9119863510131836,
+48,[],minh da nop bai tich phan chua,"[{""tool"": ""database"", ""question"": ""Kiểm tra tôi đã nộp bài tập tích phân chưa.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra thông tin về bài tập phân phối chưa nộp của người dùng.""
+    }
+  ]
+}",1,1,[0.3131752014160156],0.3131752014160156,0.3131752014160156,
+49,[],khi nào dùng cây thay vì danh sách liên kết,"[{""tool"": ""base"", ""question"": ""Nêu trường hợp nên dùng cấu trúc cây thay cho danh sách liên kết.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích khi nào nên sử dụng cây thay vì danh sách liên kết.""
+    }
+  ]
+}",1,1,[0.7668450474739075],0.7668450474739075,0.7668450474739075,
+50,[],giáo trình kinh tế phân loại thị trường ra sao,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung phân loại thị trường trong giáo trình Kinh tế.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phân loại thị trường trong giáo trình kinh tế.""
+    }
+  ]
+}",1,1,[0.9671477675437927],0.9671477675437927,0.9671477675437927,
+51,"[{""role"": ""user"", ""content"": ""Trong rubric Đồ án phần mềm có hai mục gần tên: “kiểm thử giải pháp” và “kiểm chứng yêu cầu”. Góp ý cho bản nháp của mình nhắc mục đầu.""}]","Mình sửa bản cuối theo mục còn lại. Lấy mô tả mức đạt của mục ấy trong rubric chung, lấy lời chấm đúng mục ấy ở bản cuối của mình, rồi đối chiếu xem còn yêu cầu nào lời chấm chưa đề cập.","[{""tool"": ""retrieval"", ""question"": ""Lấy mô tả mức đạt của mục kiểm chứng yêu cầu trong rubric chung môn Đồ án phần mềm.""}, {""tool"": ""database"", ""question"": ""Tra lời chấm cho mục kiểm chứng yêu cầu ở bản cuối đồ án của tôi.""}, {""tool"": ""base"", ""question"": ""Đối chiếu mô tả mức đạt với lời chấm bản cuối và chỉ ra những yêu cầu mà lời chấm chưa đề cập.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Lấy mô tả mức đạt của mục 'kiểm chứng yêu cầu' trong rubric chung.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra lời chấm đúng mục 'kiểm chứng yêu cầu' ở bản cuối của đồ án phần mềm.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Đối chiếu xem còn yêu cầu nào trong lời chấm chưa được đề cập trong bản nháp.""
+    }
+  ]
+}",1,1,"[0.7877237200737, 0.7221481800079346, 0.7471786141395569]",0.7523501714070638,0.7221481800079346,
+52,[],tìm bảng động từ bất quy tắc,"[{""tool"": ""retrieval"", ""question"": ""Tìm tài liệu chứa bảng động từ bất quy tắc.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bảng động từ bất quy tắc trong tài liệu nội bộ.""
+    }
+  ]
+}",1,1,[0.9279893040657043],0.9279893040657043,0.9279893040657043,
+53,[],bài tập nhóm môn xã hội học hạn khi nào,"[{""tool"": ""database"", ""question"": ""Tra hạn nộp bài tập nhóm môn Xã hội học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra hạn nộp bài tập nhóm môn Xã hội học trên Moodle.""
+    }
+  ]
+}",1,1,[0.6732736229896545],0.6732736229896545,0.6732736229896545,
+54,[],tìm phần ưu nhược điểm của mô hình thác nước trong giáo trình,"[{""tool"": ""retrieval"", ""question"": ""Tìm phần ưu nhược điểm mô hình thác nước trong giáo trình.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần ưu nhược điểm của mô hình thác nước trong giáo trình.""
+    }
+  ]
+}",1,1,[0.9986563920974731],0.9986563920974731,0.9986563920974731,
+55,[],cho xem nhận xét của giảng viên bài báo cáo môn kinh tế vi mô,"[{""tool"": ""database"", ""question"": ""Tra nhận xét của giảng viên về bài báo cáo môn Kinh tế vi mô của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra nhận xét của giảng viên về bài báo cáo môn Kinh tế vi mô.""
+    }
+  ]
+}",1,1,[0.9529398679733276],0.9529398679733276,0.9529398679733276,
+56,[],điểm cao nhất của mình trong các lần làm quiz chương 1 môn hóa,"[{""tool"": ""database"", ""question"": ""Tra điểm cao nhất của tôi trong các lần làm quiz chương 1 môn Hóa học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm cao nhất của người dùng trong các lần làm quiz chương 1 môn hóa.""
+    }
+  ]
+}",1,1,[0.681464433670044],0.681464433670044,0.681464433670044,
+57,[],cung cầu ảnh hưởng đến giá thế nào,"[{""tool"": ""base"", ""question"": ""Giải thích ảnh hưởng của cung và cầu đến giá cả.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích ảnh hưởng của cung cầu đến giá.""
+    }
+  ]
+}",1,1,[0.9436042904853821],0.9436042904853821,0.9436042904853821,
+58,[],cho xem ví dụ join trong tài liệu csdl,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ JOIN trong tài liệu Cơ sở dữ liệu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về join trong tài liệu CSDL.""
+    }
+  ]
+}",1,1,[0.664726734161377],0.664726734161377,0.664726734161377,
+59,[],kiếm hình minh họa mạch song song trong bài giảng,"[{""tool"": ""retrieval"", ""question"": ""Tìm hình minh họa mạch điện song song trong bài giảng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm hình minh họa mạch song song trong tài liệu nội bộ của khóa học hiện tại.""
+    }
+  ]
+}",1,1,[0.7732260227203369],0.7732260227203369,0.7732260227203369,
+60,[],slide đại số tuyến tính nói gì về điều kiện khả nghịch,"[{""tool"": ""retrieval"", ""question"": ""Tìm điều kiện khả nghịch của ma trận trong slide Đại số tuyến tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm nội dung về điều kiện khả nghịch trong slide đại số tuyến tính.""
+    }
+  ]
+}",1,1,[0.9226617813110352],0.9226617813110352,0.9226617813110352,
+61,[],tài liệu hóa có bảng tuần hoàn không,"[{""tool"": ""retrieval"", ""question"": ""Tìm bảng tuần hoàn trong tài liệu Hóa học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bảng tuần hoàn trong tài liệu nội bộ.""
+    }
+  ]
+}",1,1,[0.6856387853622437],0.6856387853622437,0.6856387853622437,
+62,[],file csv với json khác gì nhau,"[{""tool"": ""base"", ""question"": ""So sánh định dạng CSV và JSON.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa định dạng file CSV và JSON.""
+    }
+  ]
+}",1,1,[0.8629237413406372],0.8629237413406372,0.8629237413406372,
+63,[],mail giảng viên môn đại số tuyến tính,"[{""tool"": ""database"", ""question"": ""Tra địa chỉ email của giảng viên môn Đại số tuyến tính của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Gửi email đến giảng viên môn đại số tuyến tính.""
+    }
+  ]
+}",1,0,[],,,
+64,[],quiz 1 môn học máy được làm mấy lần,"[{""tool"": ""database"", ""question"": ""Tra số lần làm bài được phép của quiz 1 môn Học máy.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra số lần làm quiz 1 môn học máy.""
+    }
+  ]
+}",1,1,[0.8748359680175781],0.8748359680175781,0.8748359680175781,
+65,[],mình học xong bao nhiêu phần trăm môn python rồi,"[{""tool"": ""database"", ""question"": ""Tra tỷ lệ hoàn thành môn Python của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra phần trăm số lượng nội dung mình đã học trong môn Python trên Moodle.""
+    }
+  ]
+}",1,1,[0.6109717488288879],0.6109717488288879,0.6109717488288879,
+66,[],chủ động với bị động trong tiếng anh,"[{""tool"": ""base"", ""question"": ""Phân biệt câu chủ động và câu bị động trong tiếng Anh.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa chủ động và bị động trong tiếng Anh.""
+    }
+  ]
+}",1,1,[0.8313162326812744],0.8313162326812744,0.8313162326812744,
+67,[],chi phí cố định cho ví dụ đi,"[{""tool"": ""base"", ""question"": ""Đưa ra ví dụ về chi phí cố định.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tính toán chi phí cố định cho ví dụ đi.""
+    }
+  ]
+}",1,1,[0.9698808193206787],0.9698808193206787,0.9698808193206787,
+68,[],xem danh sách bài tập môn thống kê,"[{""tool"": ""database"", ""question"": ""Liệt kê bài tập môn Thống kê.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra danh sách bài tập môn thống kê.""
+    }
+  ]
+}",1,1,[0.8825424909591675],0.8825424909591675,0.8825424909591675,
+69,[],đã chấm điểm bài tiểu luận môn pháp luật chưa,"[{""tool"": ""database"", ""question"": ""Kiểm tra trạng thái chấm điểm bài tiểu luận môn Pháp luật của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài tiểu luận môn pháp luật đã được chấm chưa.""
+    }
+  ]
+}",1,1,[0.5699862241744995],0.5699862241744995,0.5699862241744995,
+70,[],cho ví dụ về đệ quy đơn giản,"[{""tool"": ""base"", ""question"": ""Đưa ra ví dụ đơn giản về đệ quy.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Cho ví dụ về đệ quy đơn giản.""
+    }
+  ]
+}",1,1,[0.9439655542373657],0.9439655542373657,0.9439655542373657,
+71,[],cho xem mẫu trình bày báo cáo thực tập của trường,"[{""tool"": ""retrieval"", ""question"": ""Tìm tài liệu mẫu trình bày báo cáo thực tập của trường.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm mẫu trình bày báo cáo thực tập của trường trong tài liệu nội bộ.""
+    }
+  ]
+}",1,1,[0.9642795324325562],0.9642795324325562,0.9642795324325562,
+72,[],thuật toán tìm kiếm nhị phân cần điều kiện gì,"[{""tool"": ""base"", ""question"": ""Nêu điều kiện áp dụng tìm kiếm nhị phân.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích điều kiện cần để thực hiện thuật toán tìm kiếm nhị phân.""
+    }
+  ]
+}",1,1,[0.8979939222335815],0.8979939222335815,0.8979939222335815,
+73,"[{""role"": ""user"", ""content"": ""Mình đang học môn Hệ điều hành.""}, {""role"": ""assistant"", ""content"": ""Bạn muốn xem thông tin gì về môn Hệ điều hành?""}]",lab 1 mình dc mấy điểm,"[{""tool"": ""database"", ""question"": ""Tra điểm lab 1 môn Hệ điều hành của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm lab 1 môn Hệ điều hành.""
+    }
+  ]
+}",1,1,[0.9484571814537048],0.9484571814537048,0.9484571814537048,
+74,[],vi sao can chia tap train va test,"[{""tool"": ""base"", ""question"": ""Giải thích lý do chia dữ liệu thành tập huấn luyện và tập kiểm thử.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao cần chia tập dữ liệu thành tập train và tập test.""
+    }
+  ]
+}",1,1,[0.9268872737884521],0.9268872737884521,0.9268872737884521,
+75,[],sự kiện độc lập và xung khắc có giống nhau ko,"[{""tool"": ""base"", ""question"": ""Phân biệt biến cố độc lập và biến cố xung khắc.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""So sánh sự kiện độc lập và xung khắc trong lý thuyết lập trình.""
+    }
+  ]
+}",1,1,[0.7533830404281616],0.7533830404281616,0.7533830404281616,
+76,[],khi nào dùng thì quá khứ đơn,"[{""tool"": ""base"", ""question"": ""Nêu các trường hợp sử dụng thì quá khứ đơn.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích khi nào dùng thì quá khứ đơn.""
+    }
+  ]
+}",1,1,[0.8742621541023254],0.8742621541023254,0.8742621541023254,
+77,[],tại sao cần trích nguồn khi viết báo cáo,"[{""tool"": ""base"", ""question"": ""Giải thích lý do cần trích dẫn nguồn khi viết báo cáo.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao cần trích nguồn khi viết báo cáo.""
+    }
+  ]
+}",1,1,[0.9764350652694702],0.9764350652694702,0.9764350652694702,
+78,[],trong bài giảng anm khi nào dùng chữ ký số,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung về trường hợp sử dụng chữ ký số trong bài giảng An toàn mạng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm thông tin về chữ ký số trong bài giảng ANM.""
+    }
+  ]
+}",1,1,[0.7307665348052979],0.7307665348052979,0.7307665348052979,
+79,[],khi nào nên dùng vòng while,"[{""tool"": ""base"", ""question"": ""Nêu trường hợp nên sử dụng vòng lặp while.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích khi nào nên dùng vòng while trong lập trình.""
+    }
+  ]
+}",1,1,[0.7893615961074829],0.7893615961074829,0.7893615961074829,
+80,[],cho ví dụ về học không giám sát,"[{""tool"": ""base"", ""question"": ""Đưa ra ví dụ về học không giám sát.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Cho ví dụ về học không giám sát trong lĩnh vực học máy.""
+    }
+  ]
+}",1,1,[0.9257376790046692],0.9257376790046692,0.9257376790046692,
+81,[],"quiz con trỏ môn C mình được mấy điểm, giải thích thêm con trỏ null khác con trỏ chưa khởi tạo thế nào","[{""tool"": ""database"", ""question"": ""Tra điểm quiz Con trỏ môn C của tôi.""}, {""tool"": ""base"", ""question"": ""Phân biệt con trỏ null và con trỏ chưa khởi tạo trong C.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm quiz con trỏ môn C của người dùng.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa con trỏ null và con trỏ chưa khởi tạo.""
+    }
+  ]
+}",1,1,"[0.9218118190765381, 0.7923142910003662]",0.8570630550384521,0.7923142910003662,
+82,[],tìm bài tập có lời giải về xác suất toàn phần chứ không phải bayes,"[{""tool"": ""retrieval"", ""question"": ""Tìm bài tập có lời giải áp dụng công thức xác suất toàn phần, không phải quy tắc Bayes, trong tài liệu học tập.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài tập có lời giải về xác suất toàn phần trên Moodle.""
+    }
+  ]
+}",1,0,[],,,
+83,[],vì sao dùng salt rồi vẫn cần hàm băm mật khẩu chậm,"[{""tool"": ""base"", ""question"": ""Giải thích vì sao cần hàm băm mật khẩu có chi phí tính toán cao ngay cả khi đã sử dụng salt.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao vẫn cần sử dụng hàm băm mật khẩu chậm ngay cả khi đã sử dụng salt.""
+    }
+  ]
+}",1,1,[0.76507568359375],0.76507568359375,0.76507568359375,
+84,[],tìm slide về overfitting với cho ví dụ thực tế dễ hiểu ngoài slide,"[{""tool"": ""retrieval"", ""question"": ""Tìm slide về overfitting.""}, {""tool"": ""base"", ""question"": ""Đưa ví dụ thực tế dễ hiểu về overfitting.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm slide về overfitting với ví dụ thực tế dễ hiểu ngoài slide.""
+    }
+  ]
+}",1,0,[],,,
+85,[],"mình nộp lab docker chưa, giải thích image khác container chỗ nào","[{""tool"": ""database"", ""question"": ""Kiểm tra tôi đã nộp bài lab Docker chưa.""}, {""tool"": ""base"", ""question"": ""Phân biệt Docker image và container.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa image và container trong Docker.""
+    }
+  ]
+}",1,0,[],,,
+86,[],mạng /26 chia được bao nhiêu địa chỉ host dùng được,"[{""tool"": ""base"", ""question"": ""Tính số địa chỉ host sử dụng được trong một mạng IPv4 /26 thông thường.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Mạng /26 có 62 địa chỉ host dùng được.""
+    }
+  ]
+}",1,1,[0.6290077567100525],0.6290077567100525,0.6290077567100525,
+87,[],trong tài liệu phương pháp nghiên cứu phần chọn mẫu ngẫu nhiên phân tầng nằm đâu,"[{""tool"": ""retrieval"", ""question"": ""Tìm vị trí nội dung chọn mẫu ngẫu nhiên phân tầng trong tài liệu Phương pháp nghiên cứu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần chọn mẫu ngẫu nhiên phân tầng trong tài liệu phương pháp nghiên cứu.""
+    }
+  ]
+}",1,1,[0.9516886472702026],0.9516886472702026,0.9516886472702026,
+88,[],điện trở mắc song song sao tổng lại nhỏ hơn từng cái,"[{""tool"": ""base"", ""question"": ""Giải thích vì sao điện trở tương đương của các điện trở dương mắc song song nhỏ hơn từng điện trở thành phần.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích quy luật điện trở mắc song song và tại sao tổng điện trở lại nhỏ hơn điện trở của từng phần tử.""
+    }
+  ]
+}",1,1,[0.8354358673095703],0.8354358673095703,0.8354358673095703,
+89,[],slide tiếng anh thương mại có mẫu mail từ chối lịch hẹn lịch sự không,"[{""tool"": ""retrieval"", ""question"": ""Tìm mẫu email từ chối lịch hẹn một cách lịch sự trong slide Tiếng Anh thương mại.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm mẫu mail từ chối lịch hẹn lịch sự trong slide tiếng anh thương mại.""
+    }
+  ]
+}",1,1,[0.8620461225509644],0.8620461225509644,0.8620461225509644,
+90,[],trong giáo trình vật lý phần bảo toàn động lượng có ví dụ va chạm mềm ko,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ va chạm mềm trong phần bảo toàn động lượng của giáo trình Vật lý.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về va chạm mềm trong giáo trình bảo toàn động lượng.""
+    }
+  ]
+}",1,1,[0.8998972177505493],0.8998972177505493,0.8998972177505493,
+91,[],tài liệu sinh học giải thích cơ chế điều hòa đường huyết ở bài nào,"[{""tool"": ""retrieval"", ""question"": ""Tìm bài trình bày cơ chế điều hòa đường huyết trong tài liệu Sinh học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu sinh học giải thích cơ chế điều hòa đường huyết.""
+    }
+  ]
+}",1,1,[0.9280771017074585],0.9280771017074585,0.9280771017074585,
+92,[],"môn kỹ thuật số bài thực hành flip flop có điểm chưa, gửi mình slide về jk flip flop","[{""tool"": ""database"", ""question"": ""Kiểm tra bài thực hành Flip-flop môn Kỹ thuật số của tôi đã có điểm chưa.""}, {""tool"": ""retrieval"", ""question"": ""Tìm slide về JK flip-flop trong môn Kỹ thuật số.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm môn kỹ thuật số bài thực hành flip flop.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Gửi slide về JK flip flop.""
+    }
+  ]
+}",1,1,"[0.7755966186523438, 0.9007843732833862]",0.838190495967865,0.7755966186523438,
+93,[],"tìm phần transaction trong giáo trình sql, giải thích nếu mất điện trước commit thì sao","[{""tool"": ""retrieval"", ""question"": ""Tìm phần transaction trong giáo trình SQL.""}, {""tool"": ""base"", ""question"": ""Giải thích điều gì xảy ra với giao dịch chưa commit khi hệ thống mất điện.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần transaction trong giáo trình SQL và giải thích nếu mất điện trước commit thì sao.""
+    }
+  ]
+}",1,0,[],,,
+94,[],xem điểm bài kiểm tra sinh thái học với giải thích chuỗi thức ăn khác lưới thức ăn sao,"[{""tool"": ""database"", ""question"": ""Tra điểm bài kiểm tra Sinh thái học của tôi.""}, {""tool"": ""base"", ""question"": ""Phân biệt chuỗi thức ăn và lưới thức ăn.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài kiểm tra sinh thái học của người dùng.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa chuỗi thức ăn và lưới thức ăn.""
+    }
+  ]
+}",1,1,"[0.783606231212616, 0.9281787872314453]",0.8558925092220306,0.783606231212616,
+95,[],môn tiếng anh 3 có mấy bài kiểm tra chưa mở,"[{""tool"": ""database"", ""question"": ""Đếm số bài kiểm tra chưa mở trong môn Tiếng Anh 3.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra số lượng bài kiểm tra chưa mở trong môn Tiếng Anh 3.""
+    }
+  ]
+}",1,1,[0.9643819332122803],0.9643819332122803,0.9643819332122803,
+96,[],cho mình slide về nat và nói thêm nat có phải tường lửa không,"[{""tool"": ""retrieval"", ""question"": ""Tìm slide về NAT.""}, {""tool"": ""base"", ""question"": ""Giải thích sự khác biệt giữa NAT và tường lửa.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm slide về NAT trên Moodle.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích NAT và xác định liệu nó có phải là một loại tường lửa hay không.""
+    }
+  ]
+}",1,1,"[0.7450509071350098, 0.8697003722190857]",0.8073756396770477,0.7450509071350098,
+97,[],"tìm bài giảng về độ co giãn cầu, tính giúp nếu giá tăng 10% lượng cầu giảm 20% thì hệ số là bao nhiêu","[{""tool"": ""retrieval"", ""question"": ""Tìm bài giảng về độ co giãn của cầu.""}, {""tool"": ""base"", ""question"": ""Tính hệ số co giãn của cầu theo giá từ mức giá tăng 10% và lượng cầu giảm 20%.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tính hệ số độ co giãn cầu khi giá tăng 10% làm lượng cầu giảm 20%.""
+    }
+  ]
+}",1,0,[],,,
+98,[],có bài tập nào môn pháp luật đại cương đã quá hạn mà mình chưa nộp ko,"[{""tool"": ""database"", ""question"": ""Liệt kê bài tập quá hạn chưa nộp của tôi trong môn Pháp luật đại cương.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài tập môn Pháp luật đại cương đã quá hạn mà người dùng chưa nộp.""
+    }
+  ]
+}",1,1,[0.6934282779693604],0.6934282779693604,0.6934282779693604,
+99,[],môn lập trình python mình còn bài nào chưa nộp mà chưa hết hạn,"[{""tool"": ""database"", ""question"": ""Liệt kê bài tập môn Lập trình Python tôi chưa nộp và còn hạn.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài nộp chưa nộp của môn lập trình Python mà chưa hết hạn.""
+    }
+  ]
+}",1,1,[0.8714699745178223],0.8714699745178223,0.8714699745178223,
+100,[],accuracy cao mà recall thấp thì có vấn đề gì không,"[{""tool"": ""base"", ""question"": ""Giải thích ý nghĩa và rủi ro khi mô hình phân loại có accuracy cao nhưng recall thấp.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác nhau giữa accuracy và recall trong đánh giá mô hình học máy.""
+    }
+  ]
+}",1,1,[0.7878817319869995],0.7878817319869995,0.7878817319869995,
+101,[],tìm phần giải thích vì sao cần spanning tree trong bài giảng mạng,"[{""tool"": ""retrieval"", ""question"": ""Tìm phần giải thích mục đích của Spanning Tree Protocol trong bài giảng Mạng máy tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần giải thích về tầm quan trọng của Spanning Tree trong slide bài giảng mạng.""
+    }
+  ]
+}",1,1,[0.7646116614341736],0.7646116614341736,0.7646116614341736,
+102,[],"kiểm tra bài tập tích phân từng phần đã được chấm chưa, khi nào thì dùng phương pháp đó","[{""tool"": ""database"", ""question"": ""Kiểm tra trạng thái chấm bài tập Tích phân từng phần của tôi.""}, {""tool"": ""base"", ""question"": ""Nêu trường hợp nên áp dụng phương pháp tích phân từng phần.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Kiểm tra trạng thái chấm bài tập tích phân từng phần.""
+    }
+  ]
+}",1,0,[],,,
+103,"[{""role"": ""user"", ""content"": ""Mình đang học đạo hàm hàm hợp.""}]",tìm bài mẫu trong giáo trình rồi giải riêng sin(x²) lấy đạo hàm,"[{""tool"": ""retrieval"", ""question"": ""Tìm bài tập mẫu đạo hàm hàm hợp trong giáo trình.""}, {""tool"": ""base"", ""question"": ""Tính đạo hàm của sin(x²).""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài mẫu về đạo hàm hàm hợp trong giáo trình và giải riêng ví dụ sin(x²) lấy đạo hàm.""
+    }
+  ]
+}",1,0,[],,,
+104,[],"kiếm phần câu bị động trong sách tiếng anh, đổi câu They built this bridge in 1990 sang bị động","[{""tool"": ""retrieval"", ""question"": ""Tìm phần câu bị động trong giáo trình Tiếng Anh.""}, {""tool"": ""base"", ""question"": ""Chuyển câu They built this bridge in 1990 sang câu bị động.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Đổi câu They built this bridge in 1990 sang bị động.""
+    }
+  ]
+}",1,0,[],,,
+105,[],tìm tài liệu về pin điện hóa rồi cho biết tại sao electron đi qua dây dẫn thay vì cầu muối,"[{""tool"": ""retrieval"", ""question"": ""Tìm tài liệu về pin điện hóa.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao electron đi qua dây dẫn ngoài thay vì cầu muối trong pin điện hóa.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu về pin điện hóa và giải thích tại sao electron đi qua dây dẫn thay vì cầu muối.""
+    }
+  ]
+}",1,0,[],,,
+106,[],mẫu khảo sát lấy toàn bạn cùng lớp thì kết quả có đại diện cho cả trường k,"[{""tool"": ""base"", ""question"": ""Giải thích giới hạn về tính đại diện và sai lệch chọn mẫu khi chỉ khảo sát bạn cùng lớp để suy rộng cho cả trường.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra kết quả khảo sát từ bạn cùng lớp và xác định xem có đại diện cho cả trường không.""
+    }
+  ]
+}",1,0,[],,,
+107,[],slide hệ điều hành có bảng so sánh lập lịch rr với sjf ko,"[{""tool"": ""retrieval"", ""question"": ""Tìm bảng hoặc nội dung so sánh Round Robin và SJF trong slide Hệ điều hành.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bảng so sánh lập lịch RR với SJF trong slide Hệ điều hành.""
+    }
+  ]
+}",1,1,[0.7692239284515381],0.7692239284515381,0.7692239284515381,
+108,[],nếu 2 tiến trình cùng sửa một biến thì mutex giải quyết ra sao,"[{""tool"": ""base"", ""question"": ""Giải thích cách mutex bảo vệ vùng tới hạn khi hai tiến trình cùng sửa một biến trong bộ nhớ chia sẻ.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích cách mutex giải quyết vấn đề khi hai tiến trình cùng sửa một biến.""
+    }
+  ]
+}",1,1,[0.7472313642501831],0.7472313642501831,0.7472313642501831,
+109,[],"điểm bài kiểm tra hóa hữu cơ của mình bao nhiêu, với lại đồng phân cấu tạo khác đồng phân hình học ở đâu","[{""tool"": ""database"", ""question"": ""Tra điểm bài kiểm tra Hóa hữu cơ của tôi.""}, {""tool"": ""base"", ""question"": ""Phân biệt đồng phân cấu tạo và đồng phân hình học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài kiểm tra hóa hữu cơ của người dùng.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm thông tin về đồng phân cấu tạo và đồng phân hình học trong tài liệu nội bộ.""
+    }
+  ]
+}",1,0,[],,,
+110,[],"mảng đã sắp xếp nhưng có nhiều phần tử trùng, tìm vị trí xuất hiện đầu tiên bằng binary search kiểu gì","[{""tool"": ""base"", ""question"": ""Hướng dẫn điều chỉnh tìm kiếm nhị phân để tìm vị trí xuất hiện đầu tiên của một giá trị trong mảng đã sắp xếp.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích cách thực hiện binary search khi mảng đã sắp xếp nhưng có phần tử trùng lặp và tìm vị trí xuất hiện đầu tiên.""
+    }
+  ]
+}",1,1,[0.7645353078842163],0.7645353078842163,0.7645353078842163,
+111,[],trong giáo trình cấu trúc dữ liệu tìm giúp ví dụ xóa nút có 2 con ở cây bst,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ xóa nút có hai con trong cây tìm kiếm nhị phân ở giáo trình Cấu trúc dữ liệu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về xóa nút có 2 con ở cây BST trong giáo trình cấu trúc dữ liệu.""
+    }
+  ]
+}",1,1,[0.806459903717041],0.806459903717041,0.806459903717041,
+112,[],"máy có 8gb ram mà mở nhiều tab bị chậm, liên quan gì đến bộ nhớ ảo","[{""tool"": ""base"", ""question"": ""Giải thích vai trò của bộ nhớ ảo khi RAM 8 GB không đủ cho nhiều tab trình duyệt.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự liên quan giữa bộ nhớ RAM và bộ nhớ ảo trong việc máy tính mở nhiều tab bị chậm.""
+    }
+  ]
+}",1,1,[0.8256778717041016],0.8256778717041016,0.8256778717041016,
+113,[],tìm slide về phân tầng xã hội và cho ví dụ phân biệt địa vị đạt được với địa vị gán cho,"[{""tool"": ""retrieval"", ""question"": ""Tìm slide về phân tầng xã hội.""}, {""tool"": ""base"", ""question"": ""Phân biệt địa vị đạt được và địa vị gán cho bằng ví dụ.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm slide về phân tầng xã hội và ví dụ phân biệt địa vị đạt được với địa vị gán cho.""
+    }
+  ]
+}",1,0,[],,,
+114,"[{""role"": ""user"", ""content"": ""Mình đang làm lab định tuyến tĩnh môn mạng.""}]","bài này còn hạn ko, tìm file hướng dẫn cấu hình luôn","[{""tool"": ""database"", ""question"": ""Tra hạn nộp và kiểm tra bài lab Định tuyến tĩnh còn hạn hay không.""}, {""tool"": ""retrieval"", ""question"": ""Tìm tài liệu hướng dẫn cấu hình định tuyến tĩnh trong môn Mạng máy tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Kiểm tra hạn nộp bài lab định tuyến tĩnh môn mạng.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm file hướng dẫn cấu hình lab định tuyến tĩnh môn mạng.""
+    }
+  ]
+}",1,1,"[0.742321789264679, 0.8068197965621948]",0.7745707929134369,0.742321789264679,
+115,[],tại sao mặt trăng có pha nhưng không phải tháng nào cũng có nguyệt thực,"[{""tool"": ""base"", ""question"": ""Giải thích sự khác biệt giữa nguyên nhân hình thành các pha Mặt Trăng và điều kiện xảy ra nguyệt thực.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao mặt trăng có pha nhưng không phải tháng nào cũng có nguyệt thực.""
+    }
+  ]
+}",1,1,[0.8053432703018188],0.8053432703018188,0.8053432703018188,
+116,[],điểm quiz mạng máy tính lần cao nhất của mình là bn,"[{""tool"": ""database"", ""question"": ""Tra điểm cao nhất trong các lần làm quiz môn Mạng máy tính của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm quiz mạng máy tính lần cao nhất của người dùng.""
+    }
+  ]
+}",1,1,[0.8372492790222168],0.8372492790222168,0.8372492790222168,
+117,[],điểm bài lab gần nhất và lần trước đó môn linux của mình,"[{""tool"": ""database"", ""question"": ""Tra điểm hai bài lab gần nhất của tôi trong môn Linux theo thứ tự thời gian.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài lab gần nhất môn Linux của người dùng.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài lab trước đó môn Linux của người dùng.""
+    }
+  ]
+}",1,0,[],,,
+118,[],tuần này có những bài tập nào đến hạn trong các môn đang học,"[{""tool"": ""database"", ""question"": ""Liệt kê bài tập đến hạn trong tuần này thuộc các môn tôi đang học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài tập đến hạn trong các môn đang học của người dùng.""
+    }
+  ]
+}",1,1,[0.7046250104904175],0.7046250104904175,0.7046250104904175,
+119,[],xem mình đã làm quiz chuẩn hóa csdl chưa và tìm bài giải mẫu chuyển bảng về 3nf,"[{""tool"": ""database"", ""question"": ""Kiểm tra tôi đã làm quiz Chuẩn hóa cơ sở dữ liệu chưa.""}, {""tool"": ""retrieval"", ""question"": ""Tìm bài giải mẫu chuyển bảng về dạng chuẩn 3NF.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Kiểm tra xem người dùng đã hoàn thành quiz chuẩn hóa csdl chưa.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài giải mẫu chuyển bảng về 3nf.""
+    }
+  ]
+}",1,1,"[0.6338617205619812, 0.9126001596450806]",0.7732309401035309,0.6338617205619812,
+120,[],cho mình bài mẫu tính subnet khi chia mạng thành các mạng con khác kích thước trong tài liệu môn mạng,"[{""tool"": ""retrieval"", ""question"": ""Tìm bài tập mẫu chia subnet theo VLSM trong tài liệu môn Mạng máy tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài mẫu tính subnet khi chia mạng thành các mạng con khác kích thước trong tài liệu môn mạng.""
+    }
+  ]
+}",1,1,[0.7703385949134827],0.7703385949134827,0.7703385949134827,
+121,[],trong tài liệu anm có hướng dẫn kiểm tra tính toàn vẹn file bằng hash không,"[{""tool"": ""retrieval"", ""question"": ""Tìm hướng dẫn kiểm tra tính toàn vẹn tệp bằng hàm băm trong tài liệu An toàn mạng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm hướng dẫn kiểm tra tính toàn vẹn file bằng hash trong tài liệu ANM.""
+    }
+  ]
+}",1,1,[0.6318557262420654],0.6318557262420654,0.6318557262420654,
+122,[],cho xin phần phân biệt phản ứng tỏa nhiệt thu nhiệt kèm đồ thị trong tài liệu hóa,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung phân biệt phản ứng tỏa nhiệt và thu nhiệt kèm đồ thị năng lượng trong tài liệu Hóa học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần phân biệt phản ứng tỏa nhiệt thu nhiệt kèm đồ thị trong tài liệu hóa.""
+    }
+  ]
+}",1,1,[0.9239538908004761],0.9239538908004761,0.9239538908004761,
+123,"[{""role"": ""user"", ""content"": ""Mình vừa làm xong mấy quiz hệ điều hành.""}]",có cái nào làm rồi mà chưa có điểm k,"[{""tool"": ""database"", ""question"": ""Đếm số hoạt động tôi đã hoàn thành trong môn Giải tích.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra xem có quiz hệ điều hành nào Đã làm nhưng chưa có điểm.""
+    }
+  ]
+}",1,1,[0.3363494873046875],0.3363494873046875,0.3363494873046875,
+124,[],vì sao kháng sinh không chữa được cúm,"[{""tool"": ""base"", ""question"": ""Giải thích vì sao kháng sinh không điều trị được virus gây cúm.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao kháng sinh không có tác dụng trong việc điều trị cúm.""
+    }
+  ]
+}",1,1,[0.9078984260559082],0.9078984260559082,0.9078984260559082,
+125,[],cho ví dụ 1 ma trận 2x2 ko khả nghịch và giải thích,"[{""tool"": ""base"", ""question"": ""Đưa ví dụ ma trận 2x2 không khả nghịch và giải thích dựa trên định thức.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tạo một ma trận 2x2 ko khả nghịch và giải thích.""
+    }
+  ]
+}",1,1,[0.9100865721702576],0.9100865721702576,0.9100865721702576,
+126,[],"tung 2 xúc xắc, biết tổng bằng 8 thì xác suất có ít nhất một mặt 3 là bao nhiêu","[{""tool"": ""base"", ""question"": ""Tính xác suất có ít nhất một mặt 3 khi gieo hai xúc xắc công bằng, biết tổng hai mặt bằng 8.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tính xác suất có ít nhất một mặt 3 khi tung 2 xúc xắc và tổng bằng 8.""
+    }
+  ]
+}",1,1,[0.941297173500061],0.941297173500061,0.941297173500061,
+127,[],giá trần thấp hơn giá cân bằng thì thị trường xảy ra gì,"[{""tool"": ""base"", ""question"": ""Phân tích tác động của giá trần thấp hơn giá cân bằng trong mô hình cung cầu cạnh tranh.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giá trần thấp hơn giá cân bằng sẽ dẫn đến tình trạng thiếu hụt cung, vì giá không đủ cao để khuyến khích nhà sản xuất cung cấp đủ sản phẩm. Thị trường sẽ không cân bằng và có thể xảy ra tình trạng chờ hàng hoặc tăng giá bán lẻ.""
+    }
+  ]
+}",1,1,[0.7574666142463684],0.7574666142463684,0.7574666142463684,
+128,[],lọc các bài tập đã nộp muộn của mình trong môn kinh tế vĩ mô,"[{""tool"": ""database"", ""question"": ""Liệt kê bài tập tôi đã nộp muộn trong môn Kinh tế vĩ mô.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Lọc các bài tập đã nộp muộn của người dùng trong môn Kinh tế vĩ mô.""
+    }
+  ]
+}",1,1,[0.8910747766494751],0.8910747766494751,0.8910747766494751,
+129,"[{""role"": ""user"", ""content"": ""Mình đang học Java, phần interface và abstract class.""}]",thế lúc nào nên chọn cái đầu thay vì cái sau,"[{""tool"": ""base"", ""question"": ""So sánh trường hợp sử dụng interface và abstract class trong Java.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích khi nào nên sử dụng interface thay vì abstract class trong Java.""
+    }
+  ]
+}",1,1,[0.9493141174316406],0.9493141174316406,0.9493141174316406,
+130,[],cho xem điểm và nhận xét của giảng viên ở bài tiểu luận tâm lý học,"[{""tool"": ""database"", ""question"": ""Tra điểm và nhận xét của giảng viên đối với bài tiểu luận Tâm lý học của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra nhận xét của giảng viên về bài tiểu luận tâm lý học của người dùng.""
+    }
+  ]
+}",1,1,[0.9029455184936523],0.9029455184936523,0.9029455184936523,
+131,[],"tìm ví dụ dùng stack để kiểm tra ngoặc trong giáo trình, rồi giải thích vì sao queue không phù hợp","[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ kiểm tra dấu ngoặc bằng stack trong giáo trình.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao queue không phù hợp để kiểm tra dấu ngoặc lồng nhau theo cách dùng stack.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ sử dụng stack để kiểm tra ngoặc trong giáo trình.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao queue không phù hợp để kiểm tra ngoặc.""
+    }
+  ]
+}",1,1,"[0.9434871673583984, 0.8246569633483887]",0.8840720653533936,0.8246569633483887,
+132,[],pha loãng axit yếu thì độ điện li thay đổi sao,"[{""tool"": ""base"", ""question"": ""Giải thích sự thay đổi độ điện li của axit yếu khi pha loãng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Pha loãng axit yếu làm tăng độ điện li của axit, do đó pH của dung dịch tăng.""
+    }
+  ]
+}",1,1,[0.5359708666801453],0.5359708666801453,0.5359708666801453,
+133,[],mấy bài quiz xác suất mình còn lượt làm lại,"[{""tool"": ""database"", ""question"": ""Liệt kê quiz môn Xác suất tôi còn lượt làm lại.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra số lượt làm lại còn lại cho các bài quiz về xác suất.""
+    }
+  ]
+}",1,1,[0.8443609476089478],0.8443609476089478,0.8443609476089478,
+134,[],tra hạn nộp tiểu luận kinh tế quốc tế rồi tìm tài liệu về lợi thế so sánh,"[{""tool"": ""database"", ""question"": ""Tra hạn nộp tiểu luận môn Kinh tế quốc tế của tôi.""}, {""tool"": ""retrieval"", ""question"": ""Tìm tài liệu về lợi thế so sánh trong Kinh tế quốc tế.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra hạn nộp tiểu luận kinh tế quốc tế.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu về lợi thế so sánh.""
+    }
+  ]
+}",1,1,"[0.8826655149459839, 0.7558307647705078]",0.8192481398582458,0.7558307647705078,
+135,[],liệt kê các môn mình đã đăng ký nhưng chưa có hoạt động nào được đánh dấu hoàn thành,"[{""tool"": ""database"", ""question"": ""Liệt kê các môn tôi đã đăng ký mà chưa có hoạt động nào được đánh dấu hoàn thành.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra danh sách các môn học đã đăng ký mà chưa có hoạt động nào được đánh dấu hoàn thành.""
+    }
+  ]
+}",1,1,[0.8344556093215942],0.8344556093215942,0.8344556093215942,
+136,[],phân biệt trí nhớ ngắn hạn và trí nhớ làm việc bằng ví dụ,"[{""tool"": ""base"", ""question"": ""So sánh trí nhớ ngắn hạn và trí nhớ làm việc, kèm ví dụ.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác biệt giữa trí nhớ ngắn hạn và trí nhớ làm việc bằng cách sử dụng ví dụ.""
+    }
+  ]
+}",1,1,[0.9427212476730347],0.9427212476730347,0.9427212476730347,
+137,[],bài giảng đại số tuyến tính có hướng dẫn tìm cơ sở không gian nghiệm chỗ nào,"[{""tool"": ""retrieval"", ""question"": ""Tìm phần hướng dẫn tìm cơ sở của không gian nghiệm trong bài giảng Đại số tuyến tính.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm hướng dẫn tìm cơ sở không gian nghiệm trong bài giảng đại số tuyến tính.""
+    }
+  ]
+}",1,1,[0.9726078510284424],0.9726078510284424,0.9726078510284424,
+138,[],bài thực hành số 3 môn csdl có cho nộp lại không,"[{""tool"": ""database"", ""question"": ""Tra thiết lập cho phép nộp lại bài thực hành số 3 môn Cơ sở dữ liệu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Kiểm tra hạn nộp và trạng thái nộp bài thực hành số 3 môn CSDL.""
+    }
+  ]
+}",1,1,[0.5935584306716919],0.5935584306716919,0.5935584306716919,
+139,[],tích phân xác định bằng 0 có nghĩa hàm số bằng 0 không,"[{""tool"": ""base"", ""question"": ""Giải thích vì sao tích phân xác định bằng 0 không nhất thiết kéo theo hàm số bằng 0, kèm ví dụ.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tích phân xác định bằng 0 có nghĩa là hàm số đó có thể bằng 0 trên đoạn tích phân.""
+    }
+  ]
+}",1,1,[0.8104784488677979],0.8104784488677979,0.8104784488677979,
+140,[],tìm ví dụ về chi phí cơ hội của doanh nghiệp trong bài giảng kinh tế,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ về chi phí cơ hội của doanh nghiệp trong bài giảng Kinh tế.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về chi phí cơ hội của doanh nghiệp trong giáo trình kinh tế.""
+    }
+  ]
+}",1,1,[0.9215754866600037],0.9215754866600037,0.9215754866600037,
+141,[],xem giúp những quiz môn hệ điều hành mình làm rồi nhưng chưa có điểm,"[{""tool"": ""database"", ""question"": ""Liệt kê quiz môn Hệ điều hành tôi đã làm nhưng chưa có điểm.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra lịch sử làm quiz môn Hệ điều hành và điểm của người dùng.""
+    }
+  ]
+}",1,1,[0.5550320148468018],0.5550320148468018,0.5550320148468018,
+142,[],trong 2 môn vật lý đại cương và hóa đại cương môn nào mình hoàn thành nhiều hoạt động hơn,"[{""tool"": ""database"", ""question"": ""So sánh số hoạt động tôi đã hoàn thành ở Vật lý đại cương và Hóa đại cương.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""So sánh số lượng hoạt động đã hoàn thành trong 2 môn vật lý đại cương và hóa đại cương.""
+    }
+  ]
+}",1,1,[0.8281668424606323],0.8281668424606323,0.8281668424606323,
+143,[],bài tập nào môn lập trình web có hạn nộp gần nhất mà mình chưa làm,"[{""tool"": ""database"", ""question"": ""Tìm bài tập chưa hoàn thành có hạn nộp sắp tới gần nhất trong môn Lập trình web.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài tập môn lập trình web có hạn nộp gần nhất mà người dùng chưa làm.""
+    }
+  ]
+}",1,1,[0.8418185710906982],0.8418185710906982,0.8418185710906982,
+144,[],2 bảng có quan hệ nhiều nhiều thì thiết kế khóa ngoại ntn,"[{""tool"": ""base"", ""question"": ""Hướng dẫn thiết kế bảng trung gian và khóa ngoại cho quan hệ nhiều-nhiều trong cơ sở dữ liệu quan hệ.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích cách thiết kế khóa ngoại cho quan hệ nhiều nhiều.""
+    }
+  ]
+}",1,1,[0.6504098176956177],0.6504098176956177,0.6504098176956177,
+145,[],xem hạn nộp bài hồi quy tuyến tính của mình và nhắc lại điều kiện để dùng hồi quy tuyến tính đơn,"[{""tool"": ""database"", ""question"": ""Tra hạn nộp bài Hồi quy tuyến tính của tôi.""}, {""tool"": ""base"", ""question"": ""Nêu các điều kiện và giả định thường dùng của hồi quy tuyến tính đơn.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra hạn nộp bài hồi quy tuyến tính của người dùng.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích điều kiện để sử dụng hồi quy tuyến tính đơn.""
+    }
+  ]
+}",1,1,"[0.5559749603271484, 0.8586246967315674]",0.7072998285293579,0.5559749603271484,
+146,[],lúc nào dùng present perfect thay cho past simple,"[{""tool"": ""base"", ""question"": ""So sánh trường hợp sử dụng thì hiện tại hoàn thành và quá khứ đơn trong tiếng Anh.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác biệt giữa past simple và present perfect trong ngữ pháp tiếng Anh.""
+    }
+  ]
+}",1,1,[0.5769295692443848],0.5769295692443848,0.5769295692443848,
+147,[],tại sao chuẩn hóa dữ liệu lại quan trọng với knn hơn cây quyết định,"[{""tool"": ""base"", ""question"": ""So sánh ảnh hưởng của chuẩn hóa đặc trưng đối với KNN và cây quyết định.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao chuẩn hóa dữ liệu quan trọng với KNN hơn cây quyết định.""
+    }
+  ]
+}",1,1,[0.7913938760757446],0.7913938760757446,0.7913938760757446,
+148,[],"tài liệu vật lý có phần ma sát nghỉ không, giải thích vì sao vật đứng yên vẫn có thể chịu ma sát","[{""tool"": ""retrieval"", ""question"": ""Tìm phần ma sát nghỉ trong tài liệu Vật lý.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao vật đứng yên vẫn có thể chịu lực ma sát nghỉ.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao vật đứng yên vẫn có thể chịu ma sát và có phần ma sát nghỉ.""
+    }
+  ]
+}",1,0,[],,,
+149,"[{""role"": ""user"", ""content"": ""Mình đang ôn gradient descent trong môn Học máy.""}]",có bài mẫu tính từng vòng lặp trong slide ko,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ giải gradient descent có tính từng vòng lặp trong slide Học máy.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài mẫu tính gradient descent từng vòng lặp trong slide.""
+    }
+  ]
+}",1,1,[0.9245198965072632],0.9245198965072632,0.9245198965072632,
+150,[],tìm đoạn nói về lỗi cập nhật dữ liệu khi bảng chưa chuẩn hóa trong giáo trình csdl,"[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung về bất thường cập nhật trong bảng chưa chuẩn hóa ở giáo trình Cơ sở dữ liệu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm đoạn nói về lỗi cập nhật dữ liệu khi bảng chưa chuẩn hóa trong giáo trình CSDL.""
+    }
+  ]
+}",1,1,[0.7016695141792297],0.7016695141792297,0.7016695141792297,
+151,[],"trong các môn đang học, môn nào có bài đã nộp đúng hạn nhưng vẫn chưa được chấm lâu nhất","[{""tool"": ""database"", ""question"": ""Tìm môn đang học có bài nộp đúng hạn chưa được chấm với thời gian chờ lâu nhất.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài đã nộp đúng hạn nhưng chưa được chấm lâu nhất trong các môn đang học.""
+    }
+  ]
+}",1,1,[0.8451029062271118],0.8451029062271118,0.8451029062271118,
+152,[],tại sao tăng lãi suất có thể làm giảm lạm phát nhưng lại làm thất nghiệp tăng trong ngắn hạn,"[{""tool"": ""base"", ""question"": ""Phân tích tác động ngắn hạn của tăng lãi suất lên lạm phát và thất nghiệp.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao tăng lãi suất có thể làm giảm lạm phát nhưng lại làm thất nghiệp tăng trong ngắn hạn.""
+    }
+  ]
+}",1,1,[0.901197075843811],0.901197075843811,0.901197075843811,
+153,[],"tìm ví dụ về nghịch lý Simpson trong tài liệu thống kê, giải thích vì sao xu hướng có thể đảo khi gộp nhóm","[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ nghịch lý Simpson trong tài liệu Thống kê.""}, {""tool"": ""base"", ""question"": ""Giải thích cơ chế đảo chiều xu hướng khi gộp nhóm trong nghịch lý Simpson.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về nghịch lý Simpson trong tài liệu thống kê.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao xu hướng có thể đảo khi gộp nhóm.""
+    }
+  ]
+}",1,1,"[0.9896674156188965, 0.6875649690628052]",0.8386161923408508,0.6875649690628052,
+154,[],"tìm bài thực hành đo độ dẫn điện dung dịch trong tài liệu hóa lý, giải thích vì sao tăng nồng độ không phải lúc nào cũng tăng độ dẫn mol","[{""tool"": ""retrieval"", ""question"": ""Tìm bài thực hành đo độ dẫn điện dung dịch trong tài liệu Hóa lý.""}, {""tool"": ""base"", ""question"": ""Giải thích ảnh hưởng của nồng độ đến độ dẫn điện mol của dung dịch điện ly.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài thực hành đo độ dẫn điện dung dịch trong tài liệu thực hành hóa lý.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích vì sao tăng nồng độ không phải lúc nào cũng tăng độ dẫn mol.""
+    }
+  ]
+}",1,1,"[0.9905065298080444, 0.40053966641426086]",0.6955230981111526,0.40053966641426086,
+155,[],"điểm bài tập lớn môn thiết kế số và điểm thi giữa kỳ của mình chênh bao nhiêu, bài tập lớn đã có nhận xét chi tiết chưa","[{""tool"": ""database"", ""question"": ""Tra và tính chênh lệch điểm bài tập lớn với điểm thi giữa kỳ môn Thiết kế số của tôi.""}, {""tool"": ""database"", ""question"": ""Kiểm tra nhận xét chi tiết bài tập lớn môn Thiết kế số của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra chênh lệch điểm giữa kỳ và bài tập lớn của môn Thiết kế số.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra nhận xét chi tiết về bài tập lớn môn Thiết kế số.""
+    }
+  ]
+}",1,1,"[0.8257076740264893, 0.8778627514839172]",0.8517852127552032,0.8257076740264893,
+156,[],"Một API trả 200 nhưng nội dung báo lỗi nghiệp vụ, cách thiết kế này có nhược điểm gì? tìm quy ước mã trạng thái trong tài liệu môn web","[{""tool"": ""base"", ""question"": ""Phân tích nhược điểm của việc API trả HTTP 200 khi xảy ra lỗi nghiệp vụ.""}, {""tool"": ""retrieval"", ""question"": ""Tìm quy ước sử dụng mã trạng thái HTTP trong tài liệu môn Web.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm quy ước mã trạng thái trong tài liệu môn web.""
+    }
+  ]
+}",1,0,[],,,
+157,[],"mình có bao nhiêu bài tập môn tiếng anh học thuật được phép nộp lại, bài nào sắp hết hạn nhất","[{""tool"": ""database"", ""question"": ""Đếm bài tập Tiếng Anh học thuật tôi được phép nộp lại.""}, {""tool"": ""database"", ""question"": ""Tìm bài tập Tiếng Anh học thuật được phép nộp lại có hạn gần nhất.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra số bài tập môn Tiếng Anh học thuật được phép nộp lại của người dùng.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài tập môn Tiếng Anh học thuật sắp hết hạn nhất của người dùng.""
+    }
+  ]
+}",1,1,"[0.7973963022232056, 0.7898616790771484]",0.793628990650177,0.7898616790771484,
+158,[],"Trong slide kiến trúc máy tính có phần cache write-back, tìm giúp mình rồi giải thích tại sao mất điện có thể làm mất dữ liệu dù CPU đã ghi","[{""tool"": ""retrieval"", ""question"": ""Tìm phần cache write-back trong slide Kiến trúc máy tính.""}, {""tool"": ""base"", ""question"": ""Giải thích nguy cơ mất dữ liệu khi mất điện sau khi CPU ghi vào cache write-back.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần cache write-back trong slide kiến trúc máy tính và giải thích tại sao mất điện có thể làm mất dữ liệu dù CPU đã ghi.""
+    }
+  ]
+}",1,0,[],,,
+159,[],"Một gen có hai alen, tần số alen không đổi nhưng tỷ lệ kiểu gen thay đổi qua một thế hệ. Có nhất thiết quần thể đang tiến hóa không?","[{""tool"": ""base"", ""question"": ""Phân tích quan hệ giữa thay đổi tần số kiểu gen, tần số alen và tiến hóa quần thể.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự thay đổi tỷ lệ kiểu gen qua một thế hệ mà không thay đổi tần số alen và liệu điều này có chứng tỏ quần thể đang tiến hóa hay không.""
+    }
+  ]
+}",1,1,[0.8777734637260437],0.8777734637260437,0.8777734637260437,
+160,[],"trong môn thiên văn mình bỏ lỡ quiz nào về phổ sao, giải thích vì sao sao nóng hơn không nhất thiết sáng biểu kiến hơn","[{""tool"": ""database"", ""question"": ""Tra quiz về phổ sao trong môn Thiên văn mà tôi đã bỏ lỡ.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao nhiệt độ sao cao hơn không đảm bảo độ sáng biểu kiến lớn hơn.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao sao nóng hơn không nhất thiết sáng biểu kiến hơn.""
+    }
+  ]
+}",1,0,[],,,
+161,[],"mình đã hoàn thành những hoạt động bắt buộc nào của môn Luật đại cương, còn thiếu điều kiện hoàn thành khóa học nào","[{""tool"": ""database"", ""question"": ""Tra các hoạt động bắt buộc tôi đã hoàn thành trong môn Luật đại cương.""}, {""tool"": ""database"", ""question"": ""Kiểm tra các điều kiện hoàn thành khóa học Luật đại cương tôi còn thiếu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra hoạt động bắt buộc đã hoàn thành của môn Luật đại cương.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điều kiện hoàn thành khóa học môn Luật đại cương.""
+    }
+  ]
+}",1,1,"[0.7839913368225098, 0.6470585465431213]",0.7155249416828156,0.6470585465431213,
+162,[],"mấy bài lab linux mình nộp muộn tuần trước có bài nào chưa chấm, tìm quy định nộp muộn trong đề cương môn linux","[{""tool"": ""database"", ""question"": ""Tra các bài lab Linux tôi nộp muộn tuần trước và chưa được chấm.""}, {""tool"": ""retrieval"", ""question"": ""Tìm quy định nộp muộn trong đề cương môn Linux.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra trạng thái nộp bài lab Linux của tuần trước.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra quy định nộp bài muộn trong đề cương môn Linux.""
+    }
+  ]
+}",1,0,[],,,
+163,[],"bài tiểu luận tâm lý học mình có feedback chưa, tìm tài liệu về thiên kiến xác nhận để sửa phần lập luận","[{""tool"": ""database"", ""question"": ""Tra phản hồi bài tiểu luận Tâm lý học của tôi.""}, {""tool"": ""retrieval"", ""question"": ""Tìm tài liệu về thiên kiến xác nhận để hỗ trợ sửa lập luận.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra feedback về bài tiểu luận tâm lý học của tôi.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu về thiên kiến xác nhận để hỗ trợ sửa phần lập luận.""
+    }
+  ]
+}",1,1,"[0.9547907114028931, 0.9687145948410034]",0.9617526531219482,0.9547907114028931,
+164,[],"nếu dùng optimistic locking thì khi nào phải retry giao dịch, còn pessimistic locking có thể gây deadlock ra sao","[{""tool"": ""base"", ""question"": ""Phân tích trường hợp cần thử lại giao dịch khi dùng optimistic locking.""}, {""tool"": ""base"", ""question"": ""Giải thích cơ chế deadlock khi dùng pessimistic locking.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích khi nào phải retry giao dịch khi sử dụng optimistic locking.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tóm tắt nguyên nhân gây deadlock khi sử dụng pessimistic locking.""
+    }
+  ]
+}",1,1,"[0.8683560490608215, 0.948350191116333]",0.9083531200885773,0.8683560490608215,
+165,[],tìm bài giải về phương trình vi phân có nghiệm riêng cộng nghiệm thuần nhất; tại sao cách này không áp dụng thẳng cho phương trình phi tuyến,"[{""tool"": ""retrieval"", ""question"": ""Tìm bài giải phương trình vi phân tuyến tính bằng nghiệm riêng và nghiệm thuần nhất.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao nguyên lý chồng chất nghiệm không áp dụng trực tiếp cho phương trình vi phân phi tuyến.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài giải về phương trình vi phân có nghiệm riêng cộng nghiệm thuần nhất trong tài liệu nội bộ.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao cách này không áp dụng thẳng cho phương trình phi tuyến.""
+    }
+  ]
+}",1,1,"[0.8536198139190674, 0.7253739833831787]",0.789496898651123,0.7253739833831787,
+166,[],"vì sao một mạch khuếch đại có gain lớn nhưng vẫn không phù hợp với tín hiệu tần số cao, giải thích thêm tác động của nhiễu lên tín hiệu yếu","[{""tool"": ""base"", ""question"": ""Phân tích giới hạn băng thông của mạch khuếch đại có hệ số khuếch đại lớn.""}, {""tool"": ""base"", ""question"": ""Giải thích tác động của nhiễu lên tín hiệu đầu vào yếu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao một mạch khuếch đại có gain lớn nhưng vẫn không phù hợp với tín hiệu tần số cao và giải thích tác động của nhiễu lên tín hiệu yếu.""
+    }
+  ]
+}",1,0,[],,,
+167,[],"xem môn nào mình có điểm quiz trung bình dưới 5 nhưng điểm bài tập trung bình từ 8 trở lên, còn bài quiz nào chưa làm ở các môn đó","[{""tool"": ""database"", ""question"": ""Tìm các môn của tôi có điểm quiz trung bình dưới 5 và điểm bài tập trung bình từ 8 trở lên.""}, {""tool"": ""database"", ""question"": ""Tra các quiz tôi chưa làm trong những môn có điểm quiz trung bình dưới 5 và điểm bài tập trung bình từ 8 trở lên.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra cứu điểm quiz trung bình dưới 5 và điểm bài tập trung bình từ 8 trở lên của từng môn học.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra cứu danh sách các quiz chưa làm ở các môn có điểm quiz trung bình dưới 5 và điểm bài tập trung bình từ 8 trở lên.""
+    }
+  ]
+}",1,1,"[0.9585286378860474, 0.9311069846153259]",0.9448178112506866,0.9311069846153259,
+168,[],"tìm tài liệu về phép chiếu trực giao trong đại số tuyến tính, giải thích tại sao phần dư bình phương tối thiểu vuông góc không gian cột","[{""tool"": ""retrieval"", ""question"": ""Tìm tài liệu Đại số tuyến tính về phép chiếu trực giao.""}, {""tool"": ""base"", ""question"": ""Giải thích tính trực giao của phần dư bình phương tối thiểu với không gian cột.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu về phép chiếu trực giao trong đại số tuyến tính và giải thích tại sao phần dư bình phương tối thiểu vuông góc không gian cột.""
+    }
+  ]
+}",1,0,[],,,
+169,"[{""role"": ""user"", ""content"": ""Mình đang xem Bài lab Replication môn Cơ sở dữ liệu phân tán.""}]","bài đó mình bị trừ điểm ở đâu, sao replica đôi lúc đọc ra dữ liệu cũ vậy","[{""tool"": ""database"", ""question"": ""Tra nhận xét và các mục bị trừ điểm bài lab Replication của tôi.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao replica có thể trả về dữ liệu cũ trong hệ thống sao chép dữ liệu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài lab Replication môn Cơ sở dữ liệu phân tán của người dùng.""
+    },
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra lý do tại sao replica đôi khi đọc ra dữ liệu cũ.""
+    }
+  ]
+}",1,0,[],,,
+170,[],"tìm ví dụ dịch mã có đột biến mất một nucleotide trong giáo trình sinh học, vì sao mất ba nucleotide lại có thể ít ảnh hưởng hơn","[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ dịch mã với đột biến mất một nucleotide trong giáo trình Sinh học.""}, {""tool"": ""base"", ""question"": ""So sánh ảnh hưởng lên khung đọc khi mất một và ba nucleotide trong vùng mã hóa.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về dịch mã có đột biến mất một nucleotide trong giáo trình sinh học.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao mất ba nucleotide lại có thể ít ảnh hưởng hơn so với mất một nucleotide.""
+    }
+  ]
+}",1,1,"[0.9793943166732788, 0.7847458720207214]",0.8820700943470001,0.7847458720207214,
+171,[],tìm phần mô hình IS-LM trong slide kinh tế vĩ mô rồi giải thích vì sao chính sách tài khóa có thể lấn át đầu tư tư nhân,"[{""tool"": ""retrieval"", ""question"": ""Tìm phần mô hình IS-LM trong slide Kinh tế vĩ mô.""}, {""tool"": ""base"", ""question"": ""Giải thích hiệu ứng lấn át đầu tư tư nhân của chính sách tài khóa trong mô hình IS-LM.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần mô hình IS-LM trong slide kinh tế vĩ mô.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao chính sách tài khóa có thể lấn át đầu tư tư nhân.""
+    }
+  ]
+}",1,1,"[0.9941047430038452, 0.8391695022583008]",0.916637122631073,0.8391695022583008,
+172,[],"giải thích vì sao dùng chỉ số trung bình cộng cho tốc độ trên hai quãng đường bằng nhau có thể sai, tìm bài tương tự trong giáo trình toán ứng dụng","[{""tool"": ""base"", ""question"": ""Giải thích vì sao trung bình cộng hai tốc độ không nhất thiết là tốc độ trung bình trên hai quãng đường bằng nhau.""}, {""tool"": ""retrieval"", ""question"": ""Tìm bài tập tương tự về tốc độ trung bình trên hai quãng đường bằng nhau trong giáo trình Toán ứng dụng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao dùng chỉ số trung bình cộng cho tốc độ trên hai quãng đường bằng nhau có thể sai.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài tương tự trong giáo trình toán ứng dụng về việc giải thích sai lầm của cách tính trung bình cộng tốc độ.""
+    }
+  ]
+}",1,1,"[0.7840421199798584, 0.7888797521591187]",0.7864609360694885,0.7840421199798584,
+173,[],"mình đã nộp báo cáo về khảo sát xã hội học chưa, tìm hướng dẫn xử lý mẫu khảo sát không đại diện trong tài liệu môn này","[{""tool"": ""database"", ""question"": ""Kiểm tra trạng thái nộp báo cáo Khảo sát xã hội học của tôi.""}, {""tool"": ""retrieval"", ""question"": ""Tìm hướng dẫn xử lý mẫu khảo sát không đại diện trong tài liệu Xã hội học.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Kiểm tra trạng thái nộp báo cáo khảo sát xã hội học.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm hướng dẫn xử lý mẫu khảo sát không đại diện trong tài liệu môn này.""
+    }
+  ]
+}",1,1,"[0.9130513668060303, 0.8891388177871704]",0.9010950922966003,0.8891388177871704,
+174,"[{""role"": ""user"", ""content"": ""Mình đang xem Quiz Logic mệnh đề môn Toán rời rạc.""}]","xem điểm từng lần làm quiz đó, kiếm bài tập có lời giải về phản chứng trong tài liệu môn này","[{""tool"": ""database"", ""question"": ""Tra điểm từng lần làm quiz Logic mệnh đề của tôi.""}, {""tool"": ""retrieval"", ""question"": ""Tìm bài tập có lời giải về chứng minh phản chứng trong tài liệu Toán rời rạc.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm từng lần làm quiz về Logic mệnh đề môn Toán rời rạc.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài tập có lời giải về phản chứng trong tài liệu môn Toán rời rạc.""
+    }
+  ]
+}",1,1,"[0.8768284320831299, 0.9097148180007935]",0.8932716250419617,0.8768284320831299,
+175,[],"điểm bài thực hành chuẩn độ của mình so với điểm trung bình lớp thế nào, giải thích sai số khi đọc buret lệch góc nhìn","[{""tool"": ""database"", ""question"": ""So sánh điểm bài thực hành Chuẩn độ của tôi với điểm trung bình lớp.""}, {""tool"": ""base"", ""question"": ""Giải thích sai số do thị sai khi đọc buret.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài thực hành chuẩn độ của bạn so với điểm trung bình lớp.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sai số khi đọc buret lệch góc nhìn.""
+    }
+  ]
+}",1,1,"[0.861815869808197, 0.8749151229858398]",0.8683654963970184,0.861815869808197,
+176,[],tìm trong slide hệ điều hành phần copy-on-write và giải thích chuyện gì xảy ra khi tiến trình con ghi vào trang nhớ dùng chung sau fork,"[{""tool"": ""retrieval"", ""question"": ""Tìm phần copy-on-write trong slide Hệ điều hành.""}, {""tool"": ""base"", ""question"": ""Giải thích quá trình xử lý khi tiến trình con ghi vào trang nhớ dùng chung sau fork với copy-on-write.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm trong slide Hệ điều hành phần giải thích về copy-on-write và chuyện gì xảy ra khi tiến trình con ghi vào trang nhớ dùng chung sau fork.""
+    }
+  ]
+}",1,0,[],,,
+177,[],"tìm tài liệu phân biệt quyền tài phán theo lãnh thổ và theo quốc tịch trong luật quốc tế, kèm phần ví dụ xung đột quyền tài phán","[{""tool"": ""retrieval"", ""question"": ""Tìm nội dung phân biệt quyền tài phán theo lãnh thổ và quốc tịch trong tài liệu Luật quốc tế.""}, {""tool"": ""retrieval"", ""question"": ""Tìm ví dụ xung đột quyền tài phán trong tài liệu Luật quốc tế.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu phân biệt quyền tài phán theo lãnh thổ và theo quốc tịch trong luật quốc tế, kèm phần ví dụ xung đột quyền tài phán.""
+    }
+  ]
+}",1,0,[],,,
+178,[],Nếu dữ liệu huấn luyện bị mất cân bằng mà mình oversampling trước khi chia train test thì kết quả đánh giá sai lệch kiểu gì?,"[{""tool"": ""base"", ""question"": ""Phân tích nguy cơ rò rỉ dữ liệu và sai lệch đánh giá khi oversampling trước khi chia tập train/test.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự ảnh hưởng của oversampling dữ liệu huấn luyện trước khi chia train test đối với kết quả đánh giá.""
+    }
+  ]
+}",1,1,[0.8495206832885742],0.8495206832885742,0.8495206832885742,
+179,[],"Một tiến trình giữ khóa A rồi đợi B, tiến trình kia giữ B rồi đợi A. Nếu bắt buộc lấy khóa theo cùng thứ tự thì có tránh được tình trạng này không?","[{""tool"": ""base"", ""question"": ""Phân tích khả năng ngăn deadlock bằng quy định thứ tự lấy khóa thống nhất trong tình huống hai tiến trình giữ A và B.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích nguyên nhân dẫn đến tình trạng vòng quay khóa giữa hai tiến trình và cách tránh tình trạng này.""
+    }
+  ]
+}",1,1,[0.5953047275543213],0.5953047275543213,0.5953047275543213,
+180,[],"giải thích tại sao thêm biến vào mô hình hồi quy có thể làm R bình phương tăng dù dự đoán kém hơn, và vì sao kiểm định trên tập ngoài mẫu quan trọng","[{""tool"": ""base"", ""question"": ""Giải thích vì sao thêm biến có thể tăng R² trên tập huấn luyện dù khả năng dự đoán giảm.""}, {""tool"": ""base"", ""question"": ""Giải thích vai trò của đánh giá ngoài mẫu trong phát hiện quá khớp hồi quy.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao thêm biến vào mô hình hồi quy có thể làm R bình phương tăng dù dự đoán kém hơn.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao kiểm định trên tập ngoài mẫu quan trọng.""
+    }
+  ]
+}",1,1,"[0.8049947619438171, 0.8086729645729065]",0.8068338632583618,0.8049947619438171,
+181,[],"tại sao biến trung gian khác biến điều tiết trong hồi quy, cho ví dụ mỗi loại trong nghiên cứu giáo dục; tìm thêm ví dụ trong tài liệu phương pháp nghiên cứu giáo dục","[{""tool"": ""base"", ""question"": ""Phân biệt biến trung gian và biến điều tiết trong hồi quy, kèm ví dụ nghiên cứu giáo dục.""}, {""tool"": ""retrieval"", ""question"": ""Tìm ví dụ minh họa biến trung gian và biến điều tiết trong tài liệu phương pháp nghiên cứu giáo dục.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về biến trung gian và biến điều tiết trong hồi quy trong tài liệu phương pháp nghiên cứu giáo dục.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích sự khác biệt giữa biến trung gian và biến điều tiết trong hồi quy.""
+    }
+  ]
+}",1,0,[],,,
+182,[],Trong giáo trình hệ phân tán tìm ví dụ phân biệt nhất quán nhân quả và nhất quán tuần tự khi có nhiều tiến trình ghi đồng thời,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ trong giáo trình Hệ phân tán về nhất quán nhân quả và nhất quán tuần tự khi nhiều tiến trình ghi đồng thời.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về phân biệt nhất quán nhân quả và nhất quán tuần tự trong giáo trình hệ phân tán.""
+    }
+  ]
+}",1,1,[0.9037275314331055],0.9037275314331055,0.9037275314331055,
+183,[],"tìm trong tài liệu phương pháp nghiên cứu phần xử lý biến nhiễu khi không thể phân nhóm ngẫu nhiên, ưu tiên ví dụ thực nghiệm","[{""tool"": ""retrieval"", ""question"": ""Tìm phương pháp xử lý biến nhiễu khi không thể phân nhóm ngẫu nhiên và ví dụ thực nghiệm trong tài liệu Phương pháp nghiên cứu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về xử lý biến nhiễu khi không thể phân nhóm ngẫu nhiên trong tài liệu nội bộ.""
+    }
+  ]
+}",1,1,[0.8643879890441895],0.8643879890441895,0.8643879890441895,
+184,[],"lọc các quiz mình đã làm từ 2 lần trở lên trong môn Hóa đại cương, hiện điểm lần đầu và lần cuối","[{""tool"": ""database"", ""question"": ""Tra các quiz Hóa đại cương tôi đã làm ít nhất hai lần, kèm điểm lần làm đầu và cuối.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Lọc các quiz đã làm từ 2 lần trở lên trong môn Hóa đại cương và hiện điểm lần đầu và lần cuối.""
+    }
+  ]
+}",1,1,[0.8162833452224731],0.8162833452224731,0.8162833452224731,
+185,[],"mình còn bài nào về kiểm định giả thuyết chưa nộp, tìm tài liệu phân biệt sai lầm loại I và II để ôn","[{""tool"": ""database"", ""question"": ""Tra bài tập về kiểm định giả thuyết tôi chưa nộp.""}, {""tool"": ""retrieval"", ""question"": ""Tìm tài liệu phân biệt sai lầm loại I và loại II trong kiểm định giả thuyết.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra bài kiểm định giả thuyết chưa nộp của người dùng.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu phân biệt sai lầm loại I và II.""
+    }
+  ]
+}",1,1,"[0.6761173009872437, 0.8884832262992859]",0.7823002636432648,0.6761173009872437,
+186,[],tìm phần luật bảo toàn động lượng trong giáo trình vật lý và giải thích vì sao va chạm mềm vẫn bảo toàn động lượng nhưng không bảo toàn động năng,"[{""tool"": ""retrieval"", ""question"": ""Tìm phần định luật bảo toàn động lượng trong giáo trình Vật lý.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao va chạm mềm trong hệ cô lập bảo toàn động lượng nhưng không bảo toàn động năng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần luật bảo toàn động lượng trong giáo trình vật lý và giải thích tại sao va chạm mềm vẫn bảo toàn động lượng nhưng không bảo toàn động năng.""
+    }
+  ]
+}",1,0,[],,,
+187,[],tìm trong tài liệu an toàn thông tin ví dụ chứng thư số bị thu hồi và phần quy trình kiểm tra trạng thái bằng OCSP,"[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ chứng thư số bị thu hồi trong tài liệu An toàn thông tin.""}, {""tool"": ""retrieval"", ""question"": ""Tìm quy trình kiểm tra trạng thái chứng thư số bằng OCSP trong tài liệu An toàn thông tin.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về chứng thư số bị thu hồi và quy trình kiểm tra trạng thái bằng OCSP trong tài liệu nội bộ.""
+    }
+  ]
+}",1,0,[],,,
+188,[],ma trận có 3 trị riêng phân biệt nhưng kích thước 4x4 thì đã đủ kết luận chéo hóa được chưa,"[{""tool"": ""base"", ""question"": ""Xét điều kiện chéo hóa ma trận 4×4 có ba trị riêng phân biệt.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""base"",
+      ""question"": ""Kiểm tra xem với ma trận 4x4 có 3 trị riêng phân biệt thì đã đủ điều kiện chéo hóa chưa.""
+    }
+  ]
+}",1,1,[0.8712118864059448],0.8712118864059448,0.8712118864059448,
+189,[],"môn nào của mình có ít nhất 2 bài đã quá hạn chưa nộp trong tháng này, xếp theo số bài giảm dần","[{""tool"": ""database"", ""question"": ""Liệt kê các môn của tôi có ít nhất hai bài quá hạn chưa nộp trong tháng hiện tại, sắp xếp theo số bài giảm dần.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra số bài đã nộp muộn trong tháng này cho mỗi môn học, và sắp xếp theo số bài giảm dần.""
+    }
+  ]
+}",1,1,[0.7285513877868652],0.7285513877868652,0.7285513877868652,
+190,[],"tìm trong giáo trình trình biên dịch phần loại bỏ đệ quy trái, giải thích vì sao LL(1) gặp vấn đề với đệ quy trái và biến đổi văn phạm E → E+a | a sang dạng không đệ quy trái","[{""tool"": ""retrieval"", ""question"": ""Tìm phần loại bỏ đệ quy trái trong giáo trình Trình biên dịch.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao bộ phân tích LL(1) gặp vấn đề với đệ quy trái.""}, {""tool"": ""base"", ""question"": ""Biến đổi văn phạm E → E+a | a sang dạng không đệ quy trái.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm trong giáo trình trình biên dịch phần loại bỏ đệ quy trái, giải thích vì sao LL(1) gặp vấn đề với đệ quy trái và biến đổi văn phạm E → E+a | a sang dạng không đệ quy trái.""
+    }
+  ]
+}",1,0,[],,,
+191,[],"cho mình slide về bộ lọc kalman, tìm thêm bài tập về nhiễu đo trong giáo trình điều khiển tự động rồi giải thích nếu tăng phương sai nhiễu đo thì hệ số khuếch đại kalman thay đổi thế nào","[{""tool"": ""retrieval"", ""question"": ""Tìm slide về bộ lọc Kalman.""}, {""tool"": ""retrieval"", ""question"": ""Tìm bài tập về nhiễu đo trong giáo trình Điều khiển tự động.""}, {""tool"": ""base"", ""question"": ""Phân tích ảnh hưởng của việc tăng phương sai nhiễu đo đến hệ số khuếch đại Kalman khi các yếu tố khác giữ nguyên.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm slide về bộ lọc Kalman trong giáo trình điều khiển tự động.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài tập về nhiễu đo trong giáo trình điều khiển tự động.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích rằng khi tăng phương sai nhiễu đo, hệ số khuếch đại Kalman sẽ tăng để giảm ảnh hưởng của nhiễu.""
+    }
+  ]
+}",1,1,"[0.828312873840332, 0.9988011121749878, 0.838157057762146]",0.8884236812591553,0.828312873840332,
+192,[],"tìm phần bù công suất phản kháng trong tài liệu kỹ thuật điện, tính dung lượng bù cho tải 10kW từ cos phi 0.7 lên 0.95 và giải thích tại sao dòng điện giảm","[{""tool"": ""retrieval"", ""question"": ""Tìm phần bù công suất phản kháng trong tài liệu Kỹ thuật điện.""}, {""tool"": ""base"", ""question"": ""Tính công suất phản kháng cần bù cho tải 10 kW để nâng hệ số công suất từ 0,7 lên 0,95.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao dòng điện nguồn giảm khi nâng hệ số công suất với công suất tác dụng và điện áp không đổi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần bù công suất phản kháng trong tài liệu kỹ thuật điện.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Tính dung lượng bù cho tải 10kW từ cos phi 0.7 lên 0.95 và giải thích tại sao dòng điện giảm.""
+    }
+  ]
+}",1,0,[],,,
+193,"[{""role"": ""user"", ""content"": ""Mình đang học thiết kế thực nghiệm ngẫu nhiên và bán thực nghiệm trong môn Phương pháp nghiên cứu.""}]","2 cái này trong giáo trình có ví dụ thực nghiệm ko, tìm riêng phần hạn chế của từng cái trong slide nữa, rồi cho biết dùng cái nào nếu muốn đo ảnh hưởng của biến độc lập mà không thể phân nhóm ngẫu nhiên","[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ thực nghiệm về thiết kế thực nghiệm ngẫu nhiên và bán thực nghiệm trong giáo trình Phương pháp nghiên cứu.""}, {""tool"": ""retrieval"", ""question"": ""Tìm nội dung về hạn chế của thiết kế thực nghiệm ngẫu nhiên và bán thực nghiệm trong slide Phương pháp nghiên cứu.""}, {""tool"": ""base"", ""question"": ""Đánh giá lựa chọn thiết kế nghiên cứu để đo ảnh hưởng của biến độc lập khi không thể phân nhóm ngẫu nhiên.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về thiết kế thực nghiệm ngẫu nhiên và bán thực nghiệm trong giáo trình.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Điểm hạn chế của thiết kế thực nghiệm ngẫu nhiên là gì?""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Điểm hạn chế của thiết kế thực nghiệm bán thực nghiệm là gì?""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm slide liên quan đến hạn chế của thiết kế thực nghiệm ngẫu nhiên và bán thực nghiệm.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Nếu muốn đo ảnh hưởng của biến độc lập mà không thể phân nhóm ngẫu nhiên, nên sử dụng thiết kế thực nghiệm nào?""
+    }
+  ]
+}",1,0,[],,,
+194,[],"tìm ví dụ về cơ chế feedback âm trong slide sinh lý học, giải thích tại sao đường huyết vẫn có thể cao dù insulin tăng và phân biệt kháng insulin với thiếu insulin","[{""tool"": ""retrieval"", ""question"": ""Tìm ví dụ về cơ chế phản hồi âm trong slide Sinh lý học.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao đường huyết có thể vẫn cao dù insulin tăng.""}, {""tool"": ""base"", ""question"": ""Phân biệt kháng insulin và thiếu insulin.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm ví dụ về cơ chế feedback âm trong slide sinh lý học.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao đường huyết vẫn có thể cao dù insulin tăng.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Phân biệt kháng insulin với thiếu insulin.""
+    }
+  ]
+}",1,1,"[0.9487223029136658, 0.9982837438583374, 0.9930960536003113]",0.9800340334574381,0.9487223029136658,
+195,[],"kiếm phần coherence cache trong giáo trình kiến trúc máy tính và sơ đồ trạng thái MESI trong slide, giải thích tại sao 2 luồng sửa hai biến khác nhau vẫn có thể làm chậm nhau nếu chung cache line","[{""tool"": ""retrieval"", ""question"": ""Tìm phần cache coherence trong giáo trình Kiến trúc máy tính.""}, {""tool"": ""retrieval"", ""question"": ""Tìm sơ đồ trạng thái giao thức MESI trong slide.""}, {""tool"": ""base"", ""question"": ""Giải thích hiện tượng false sharing khi hai luồng sửa hai biến khác nhau trên cùng cache line.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Lấy phần coherence cache trong giáo trình kiến trúc máy tính và sơ đồ trạng thái MESI trong slide.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích tại sao 2 luồng sửa hai biến khác nhau vẫn có thể làm chậm nhau nếu chung cache line.""
+    }
+  ]
+}",1,0,[],,,
+196,[],"trong tài liệu mật mã có phần chứng minh chữ ký số ko, tìm phần về giả thiết khó của ECDSA nữa và giải thích vì sao dùng lại nonce khi ký hai thông điệp khác nhau có thể làm lộ khóa riêng","[{""tool"": ""retrieval"", ""question"": ""Tìm phần chứng minh tính đúng đắn hoặc an toàn của chữ ký số trong tài liệu Mật mã.""}, {""tool"": ""retrieval"", ""question"": ""Tìm phần giả thiết độ khó làm nền tảng cho ECDSA trong tài liệu Mật mã.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao tái sử dụng nonce khi ký hai thông điệp khác nhau bằng ECDSA có thể làm lộ khóa riêng.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần chứng minh chữ ký số trong tài liệu mật mã.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm giả thiết khó của ECDSA trong tài liệu mật mã.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích vì sao dùng nonce khi ký hai thông điệp khác nhau có thể làm lộ khóa riêng.""
+    }
+  ]
+}",1,1,"[0.8206850290298462, 0.8887956142425537, 0.797846257686615]",0.835775633653005,0.797846257686615,
+197,[],"tìm bài giảng về cân bằng nash, lấy ví dụ trò chơi hàng hóa công cộng trong giáo trình kinh tế học rồi phân tích vì sao cân bằng cá nhân có thể không tối ưu cho cả nhóm","[{""tool"": ""retrieval"", ""question"": ""Tìm bài giảng về cân bằng Nash.""}, {""tool"": ""retrieval"", ""question"": ""Tìm ví dụ trò chơi hàng hóa công cộng trong giáo trình Kinh tế học.""}, {""tool"": ""base"", ""question"": ""Phân tích vì sao cân bằng Nash trong trò chơi hàng hóa công cộng có thể không tối ưu cho cả nhóm.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm bài giảng về cân bằng Nash và ví dụ trò chơi hàng hóa công cộng trong giáo trình kinh tế học.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Phân tích vì sao cân bằng cá nhân có thể không tối ưu cho cả nhóm.""
+    }
+  ]
+}",1,0,[],,,
+198,"[{""role"": ""user"", ""content"": ""Mình đang so sánh trung bình mẫu với trung vị mẫu trong môn Xác suất thống kê.""}]","thế nếu dữ liệu có ngoại lệ lớn thì sao, tìm phần chứng minh tính chất của 2 ước lượng đó trong giáo trình, giải thích cái nào bền vững hơn và cho ví dụ số minh họa","[{""tool"": ""retrieval"", ""question"": ""Tìm phần chứng minh tính chất của trung bình mẫu và trung vị mẫu trong giáo trình Xác suất thống kê.""}, {""tool"": ""base"", ""question"": ""So sánh độ bền vững của trung bình mẫu và trung vị mẫu trước ngoại lệ lớn.""}, {""tool"": ""base"", ""question"": ""Cho ví dụ số minh họa ảnh hưởng của ngoại lệ lớn đến trung bình mẫu và trung vị mẫu.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm phần chứng minh tính chất của trung bình mẫu và trung vị mẫu trong giáo trình môn Xác suất thống kê, đặc biệt khi dữ liệu có ngoại lệ lớn.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích cái nào bền vững hơn giữa trung bình mẫu và trung vị mẫu khi dữ liệu có ngoại lệ lớn và cho ví dụ minh họa.""
+    }
+  ]
+}",1,0,[],,,
+199,[],"tìm tài liệu về phân vùng mạng bằng vlan trong môn an toàn thông tin, tìm hướng dẫn cấu hình ACL liên VLAN trong lab rồi giải thích vì sao chỉ chia VLAN chưa đủ để kiểm soát truy cập giữa các mạng con","[{""tool"": ""retrieval"", ""question"": ""Tìm tài liệu về phân vùng mạng bằng VLAN trong môn An toàn thông tin.""}, {""tool"": ""retrieval"", ""question"": ""Tìm hướng dẫn cấu hình ACL liên VLAN trong tài liệu lab.""}, {""tool"": ""base"", ""question"": ""Giải thích vì sao chỉ chia VLAN chưa đủ để kiểm soát truy cập giữa các mạng con khi có định tuyến liên VLAN.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm tài liệu về phân vùng mạng bằng VLAN trong môn an toàn thông tin.""
+    },
+    {
+      ""tool"": ""retrieval"",
+      ""question"": ""Tìm hướng dẫn cấu hình ACL liên VLAN trong lab môn an toàn thông tin.""
+    },
+    {
+      ""tool"": ""base"",
+      ""question"": ""Giải thích vì sao chỉ chia VLAN chưa đủ để kiểm soát truy cập giữa các mạng con.""
+    }
+  ]
+}",1,1,"[0.9902452230453491, 0.9236801862716675, 0.9774779677391052]",0.9638011256853739,0.9236801862716675,
+200,[],Bài tập 2 môn Cơ sở dữ liệu của mình được mấy điểm?,"[{""tool"": ""database"", ""question"": ""Tra điểm bài tập 2 môn Cơ sở dữ liệu của tôi.""}]","{
+  ""tasks"": [
+    {
+      ""tool"": ""database"",
+      ""question"": ""Tra điểm bài tập 2 môn Cơ sở dữ liệu của người dùng hiện tại.""
+    }
+  ]
+}",1,1,[0.8809560537338257],0.8809560537338257,0.8809560537338257,
